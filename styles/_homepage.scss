@@ -1,0 +1,16 @@
+.goals-heading{
+    text-align: center;
+    margin-top: 50px;
+    font-family: fantasy;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    span{
+        margin-right: 10px;
+        margin-top: -10px;
+        color: $background;
+        font-weight: 900;
+        stroke: $background;
+        stroke-width: 4;
+    }
+}
