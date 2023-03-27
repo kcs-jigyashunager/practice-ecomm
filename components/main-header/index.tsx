@@ -14,6 +14,7 @@ import React, { useState, useEffect, forwardRef, Fragment } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 import PagesHeader from "../header-tags";
 import HeaderHero from "../header-hero-tags";
+import Slider from "@/shared/slider";
 
 function CollapsibleExample() {
   const [show, setShow] = useState(false);
@@ -25,6 +26,7 @@ function CollapsibleExample() {
   };
   return (
     <>
+      <HeaderHero />
       <Navbar collapseOnSelect className="navbar" expand="lg">
         <Container>
           <Image
@@ -78,7 +80,7 @@ function CollapsibleExample() {
         </Container>
       </Navbar>
       <PagesHeader />
-      <HeaderHero />
+      <Slider/>
     </>
   );
 }

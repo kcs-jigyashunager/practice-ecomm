@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
 import Inventory2OutlinedIcon from '@mui/icons-material/Inventory2Outlined';
 import HeadsetOutlinedIcon from '@mui/icons-material/HeadsetOutlined';
-import Slider from "@/shared/slider";
 
 const HeaderHero = () => {
   return (
@@ -17,7 +16,6 @@ const HeaderHero = () => {
             <HeadsetOutlinedIcon className="icons"/>
             <h4>24/7 Customer support</h4>
         </div>
-        <Slider/>
     </>
   );
 };

@@ -1,4 +1,5 @@
-$background: #F44F05;
+$background: #06645c;
+$text-color: #014a44;
 
 
 .navbar {
@@ -15,7 +16,7 @@ $background: #F44F05;
 }
 
 .search-bg{
-    background-color: #F44F05;
+    background-color: $background;
     margin-left: 129px;
     display: flex;
     align-items: center;
@@ -44,17 +45,17 @@ $background: #F44F05;
 
 .header-right{
     display: block;
-    color: gray;
     font-size: 13px;
-    font-weight: 500;
 }
 
 .header-right {
     span {
-    margin-left: 8px;
+        margin-left: 5px;
+        font-weight: 700;
     }
     svg{
         font-size: 30px;
+        color: $background;
     }
     .icons{
         position: absolute;
@@ -65,6 +66,11 @@ $background: #F44F05;
     }
 }
 
+.header-right:hover span{
+    cursor: pointer;
+    color: $text-color;
+}
+
 .header-lists{
     color: black;
     display: flex;
@@ -72,6 +78,7 @@ $background: #F44F05;
     align-items: center;
     position: absolute;
     z-index: 99;
+    margin-left: 30px;
 }
 
 .header-lists{
@@ -84,28 +91,26 @@ $background: #F44F05;
 }
 
 .header-lists li:hover{
-    color: black;
+    color: $text-color;
     cursor: pointer;
 }
 
 .header-hero-tags{
-    margin-top: 50px;
-    background-color: #f6d4c4;
+    background-color: aliceblue;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 42px;
-    margin-left: 30px;
-    margin-right: 30px;
+    font-weight: 800;
 }
 
 .header-hero-tags {
     p{
         transform: scale(1.5, 2);
         margin-top: 10px;
-        margin-left: 130px;
-        margin-right: 130px;
-        color: #473f3b;
+        margin-left: 100px;
+        margin-right: 100px;
+        color: $text-color;
     }
     h4{
         font-size: 14px;

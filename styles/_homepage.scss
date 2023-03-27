@@ -1,10 +1,13 @@
+$main-font: fantasy;
+$margin-page: 0px 60px 0px 60px;
+
 .goals-heading{
     text-align: center;
     margin-top: 50px;
-    font-family: fantasy;
+    font-family: $main-font;
     display: flex;
     align-items: center;
-    margin-left: 30px;
+    margin-left: 60px;
     span{
         margin-right: 10px;
         margin-top: -10px;
@@ -13,4 +16,114 @@
         stroke: $background;
         stroke-width: 4;
     }
+}
+
+.user-goals{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: $margin-page;
+    div{
+        background-color: #EFEFEF;
+        padding: 51px;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 50px;
+        max-height: 350px;
+    }
+    div:hover span {
+        border-bottom: white;
+        padding-bottom:2px;
+        display:inline-block;
+        border-bottom:2px solid white;
+        padding-bottom:2px;
+    }
+    div:hover{
+        background-color: $background;
+        color: white;
+        transition: 0.4s;
+        cursor: pointer;
+    }
+    div:hover img{
+        margin-top: 26px;
+        transition: 0.4s;
+    }
+    img{
+        display: flex;
+        margin: 0 auto;
+        vertical-align: middle;
+        width: 210px;
+        height: 300px;
+        margin-top: 60px;
+    }
+    h4{
+        font-family: $main-font;
+        text-align: center;
+        margin-top: -30px;
+        white-space: nowrap;
+    }
+    h6{
+        text-align: center;
+    }
+    span{
+        display:inline-block;
+        border-bottom:2px solid $background;
+        padding-bottom:2px;
+    }
+}
+
+.homepage-popular-categories{
+    z-index: 99;
+    position: relative;
+    background-color: white;
+   
+}
+
+.popular-categories-heading{
+        text-align: center;
+        font-family: $main-font;
+        display: inline-flex;
+        align-items: center;
+        margin: $margin-page;
+        padding-top: 60px;
+        margin-bottom: 50px;
+    span{
+            margin-right: 10px;
+            margin-top: -10px;
+            color: $background;
+            font-weight: 900;
+            stroke: $background;
+            stroke-width: 4;
+    }
+}
+
+.popular-categories{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: $margin-page;
+    .popular-categories-content{
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+    h6{
+        text-align: center;
+        font-size: 15px;
+        white-space: nowrap;
+        margin-top: 15px;
+    }
+    img{
+        display: flex;
+        margin: 0 auto;
+        vertical-align: middle;
+    }
+    div:hover img{
+        transform: scale(1.2);
+    }
+    div:hover img, div:hover h6  {
+        transition: 0.4s;    
+        color: $text-color;
+        cursor: pointer;
+    }
+    
 }

@@ -1,16 +1,15 @@
 .swiper, swiper-container{
-    margin-left: 30px !important;
-    margin-right: 30px !important;
+    margin-top: 60px !important;
 }
 
 .swiper-pagination-bullet-active {
-    background-color: #000 !important;
+    background-color: $background !important;
 }
 
 .swiper-button-next, .swiper-button-prev{
     color: white !important;
     --swiper-navigation-size: 20px;
-    background-color: black;
+    background-color: $background;
     font-weight: 700;
     border-radius: 50%;
 }
