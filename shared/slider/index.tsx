@@ -9,6 +9,7 @@ import 'swiper/css/scrollbar'
 const Slider = () => {
   return (
     <>
+    <div className="main-slider">
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={1000}
@@ -21,6 +22,7 @@ const Slider = () => {
         <SwiperSlide>
           <div className="hero-image">
             <Image
+              className="slider-image"
               alt="nutritrix"
               src="/gymcover1.jpg"
               width={1440}
@@ -32,6 +34,7 @@ const Slider = () => {
         <SwiperSlide>
           <div className="hero-image">
             <Image
+              className="slider-image"
               alt="nutritrix"
               src="/gymcover1.jpg"
               width={1440}
@@ -43,6 +46,7 @@ const Slider = () => {
         <SwiperSlide>
           <div className="hero-image">
             <Image
+              className="slider-image"
               alt="nutritrix"
               src="/gymcover1.jpg"
               width={1440}
@@ -54,6 +58,7 @@ const Slider = () => {
         <SwiperSlide>
           <div className="hero-image">
             <Image
+              className="slider-image"
               alt="nutritrix"
               src="/gymcover1.jpg"
               width={1440}
@@ -63,6 +68,7 @@ const Slider = () => {
           </div>
         </SwiperSlide>
       </Swiper>
+      </div>
     </>
   );
 };

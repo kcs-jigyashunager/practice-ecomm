@@ -1,5 +1,6 @@
 import Categories from "@/shared/goals-homepage";
 import PopularCategories from "@/shared/popular-categories";
+import ProductSlider from "@/shared/products-slider";
 import React, { useState, useEffect } from "react";
 import Header from "../main-header";
 
@@ -9,6 +10,7 @@ const Homepage = () => {
       <Header />
       <Categories/>
       <PopularCategories/>
+      <ProductSlider/>
     </>
   );
 };

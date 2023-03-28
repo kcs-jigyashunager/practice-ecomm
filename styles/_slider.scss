@@ -1,4 +1,4 @@
-.swiper, swiper-container{
+.main-slider .swiper, swiper-container{
     margin-top: 60px !important;
 }
 
@@ -20,4 +20,7 @@
 .swiper-button-prev{
     padding: 18px 20px 18px 18px;
 
+}
+.slider-image{
+    width: -webkit-fill-available;
 }
