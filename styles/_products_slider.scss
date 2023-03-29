@@ -65,4 +65,50 @@
 .stars-rating{
     display: flex;
     align-items: center;
-    font-size: 15px;}
+    font-size: 15px;
+}
+
+  .hover-up {
+    padding: 10px 59px 10px 59px;
+    margin-left: 10px;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .hover-up span {
+    position: relative;
+    z-index: 1;
+    color: black;
+    font-weight: 600;
+  }
+  
+  .hover-up::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: black;
+    transition: height 0.3s ease-out;
+    z-index: 0;
+  }
+  
+  .hover-up:hover::before,
+  .product-card:hover .hover-up::before {
+    height: 100%;
+  }
+
+  .product-card:hover .hover-up span{
+    color: white;
+  }
+  
+  .hover-up:hover::before{
+    background-color: $text-color;
+    transition: 0.2s ease-out;
+  }
+  

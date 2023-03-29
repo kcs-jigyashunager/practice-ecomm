@@ -31,33 +31,39 @@ const ProductSlider = () => {
           className="products-slider"
         >
           <SwiperSlide>
-            <div className="product-image">
-              <Image
-                alt="nutritrix"
-                src="/fusionPC.jpg"
-                width={240}
-                height={240}
-                priority
-              />
-              <h6>Category</h6>
-              <h4 className="two-line-text">
-                Optimum Nutrition Gold Standard 100% Whey Proteinn
-              </h4>
-              <div className='stars-rating'>
-                <Rating
-                  className="stars"
-                  name="read-only"
-                  value={value}
-                  readOnly
+            <div className="product-card">
+              <div className="product-image">
+                <Image
+                  alt="nutritrix"
+                  src="/fusionPC.jpg"
+                  width={240}
+                  height={240}
+                  priority
                 />
-                <span className="stars-count">(3)</span>
+                <h6>Category</h6>
+                <h4 className="two-line-text">
+                  Optimum Nutrition Gold Standard 100% Whey Proteinn
+                </h4>
+                <div className="stars-rating">
+                  <Rating
+                    className="stars"
+                    name="read-only"
+                    value={value}
+                    readOnly
+                  />
+                  <span className="stars-count">(3)</span>
+                </div>
+                <div className="product-price">
+                  <h5>$90.00</h5>
+                </div>
+                <button className="hover-up">
+                  <span>ADD TO CART</span>
+                </button>
               </div>
-              <div className='product-price'>
-                <h5>$90.00</h5>
-          </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
+          <div className="product-card">
             <div className="product-image">
               <Image
                 alt="nutritrix"
@@ -70,7 +76,7 @@ const ProductSlider = () => {
               <h4 className="two-line-text">
                 Optimum Nutrition Gold Standard 100% Whey Proteinn
               </h4>
-              <div className='stars-rating'>
+              <div className="stars-rating">
                 <Rating
                   className="stars"
                   name="read-only"
@@ -79,12 +85,17 @@ const ProductSlider = () => {
                 />
                 <span className="stars-count">(3)</span>
               </div>
-              <div className='product-price'>
+              <div className="product-price">
                 <h5>$90.00</h5>
-          </div>
+              </div>
+               <button className="hover-up">
+                  <span>ADD TO CART</span>
+                </button>
+            </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
+          <div className="product-card">
             <div className="product-image">
               <Image
                 alt="nutritrix"
@@ -97,7 +108,7 @@ const ProductSlider = () => {
               <h4 className="two-line-text">
                 Optimum Nutrition Gold Standard 100% Whey Proteinn
               </h4>
-              <div className='stars-rating'>
+              <div className="stars-rating">
                 <Rating
                   className="stars"
                   name="read-only"
@@ -106,12 +117,17 @@ const ProductSlider = () => {
                 />
                 <span className="stars-count">(3)</span>
               </div>
-              <div className='product-price'>
+              <div className="product-price">
                 <h5>$90.00</h5>
-             </div>
+              </div>
+               <button className="hover-up">
+                  <span>ADD TO CART</span>
+                </button>
+            </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
+          <div className="product-card">
             <div className="product-image">
               <Image
                 alt="nutritrix"
@@ -125,7 +141,7 @@ const ProductSlider = () => {
                 Optimum Nutrition Gold Standard 100% Whey Proteinn
               </h4>
               <div>
-                <div className='stars-rating'>
+                <div className="stars-rating">
                   <Rating
                     className="stars"
                     name="read-only"
@@ -134,13 +150,17 @@ const ProductSlider = () => {
                   />
                   <span className="stars-count">(3)</span>
                 </div>
-                <div className="product-price">
-                </div>
+                <div className="product-price"></div>
                 <h5>$90.00</h5>
+              </div>
+               <button className="hover-up">
+                  <span>ADD TO CART</span>
+                </button>
             </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
+          <div className="product-card">
             <div className="product-image">
               <Image
                 alt="nutritrix"
@@ -153,7 +173,7 @@ const ProductSlider = () => {
               <h4 className="two-line-text">
                 Optimum Nutrition Gold Standard 100% Whey Proteinn
               </h4>
-              <div className='stars-rating'>
+              <div className="stars-rating">
                 <Rating
                   className="stars"
                   name="read-only"
@@ -162,12 +182,17 @@ const ProductSlider = () => {
                 />
                 <span className="stars-count">(3)</span>
               </div>
-              <div className='product-price'>
+              <div className="product-price">
                 <h5>$90.00</h5>
               </div>
+               <button className="hover-up">
+                  <span>ADD TO CART</span>
+                </button>
+            </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
+          <div className="product-card">
             <div className="product-image">
               <Image
                 alt="nutritrix"
@@ -180,7 +205,7 @@ const ProductSlider = () => {
               <h4 className="two-line-text">
                 Optimum Nutrition Gold Standard 100% Whey Proteinn
               </h4>
-              <div className='stars-rating'>
+              <div className="stars-rating">
                 <Rating
                   className="stars"
                   name="read-only"
@@ -189,12 +214,17 @@ const ProductSlider = () => {
                 />
                 <span className="stars-count">(3)</span>
               </div>
-              <div className='product-price'>
+              <div className="product-price">
                 <h5>$90.00</h5>
-             </div>
+              </div>
+              <button className="hover-up">
+                  <span>ADD TO CART</span>
+                </button>
+            </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
+            <div className="product-card">
             <div className="product-image">
               <Image
                 alt="nutritrix"
@@ -207,7 +237,7 @@ const ProductSlider = () => {
               <h4 className="two-line-text">
                 Optimum Nutrition Gold Standard 100% Whey Proteinn
               </h4>
-              <div className='stars-rating'>
+              <div className="stars-rating">
                 <Rating
                   className="stars"
                   name="read-only"
@@ -216,12 +246,17 @@ const ProductSlider = () => {
                 />
                 <span className="stars-count">(3)</span>
               </div>
-              <div className='product-price'>
+              <div className="product-price">
                 <h5>$90.00</h5>
-             </div>
+              </div>
+               <button className="hover-up">
+                  <span>ADD TO CART</span>
+                </button>
+            </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
+            <div className="product-card">
             <div className="product-image">
               <Image
                 alt="nutritrix"
@@ -234,7 +269,7 @@ const ProductSlider = () => {
               <h4 className="two-line-text">
                 Optimum Nutrition Gold Standard 100% Whey Proteinn
               </h4>
-              <div className='stars-rating'>
+              <div className="stars-rating">
                 <Rating
                   className="stars"
                   name="read-only"
@@ -243,9 +278,13 @@ const ProductSlider = () => {
                 />
                 <span className="stars-count">(3)</span>
               </div>
-              <div className='product-price'>
+              <div className="product-price">
                 <h5>$90.00</h5>
               </div>
+               <button className="hover-up">
+                  <span>ADD TO CART</span>
+                </button>
+            </div>
             </div>
           </SwiperSlide>
         </Swiper>
