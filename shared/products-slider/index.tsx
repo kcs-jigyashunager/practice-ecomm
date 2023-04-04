@@ -8,6 +8,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Rating from "@mui/material/Rating";
+import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 
 const ProductSlider = () => {
   const [value, setValue] = useState<number>(2);
@@ -40,6 +41,7 @@ const ProductSlider = () => {
                   height={240}
                   priority
                 />
+                <FavoriteBorderOutlinedIcon className='wishlist-icon' width={60} height={60} />
                 <h6>Category</h6>
                 <h4 className="two-line-text">
                   Optimum Nutrition Gold Standard 100% Whey Proteinn
@@ -72,6 +74,7 @@ const ProductSlider = () => {
                 height={240}
                 priority
               />
+              <FavoriteBorderOutlinedIcon className='wishlist-icon' width={60} height={60} />
               <h6>Category</h6>
               <h4 className="two-line-text">
                 Optimum Nutrition Gold Standard 100% Whey Proteinn
@@ -104,6 +107,7 @@ const ProductSlider = () => {
                 height={240}
                 priority
               />
+              <FavoriteBorderOutlinedIcon className='wishlist-icon' width={60} height={60} />
               <h6>Category</h6>
               <h4 className="two-line-text">
                 Optimum Nutrition Gold Standard 100% Whey Proteinn
@@ -136,6 +140,7 @@ const ProductSlider = () => {
                 height={240}
                 priority
               />
+              <FavoriteBorderOutlinedIcon className='wishlist-icon' width={60} height={60} />
               <h6>Category</h6>
               <h4 className="two-line-text">
                 Optimum Nutrition Gold Standard 100% Whey Proteinn
@@ -169,6 +174,7 @@ const ProductSlider = () => {
                 height={240}
                 priority
               />
+              <FavoriteBorderOutlinedIcon className='wishlist-icon' width={60} height={60} />
               <h6>Category</h6>
               <h4 className="two-line-text">
                 Optimum Nutrition Gold Standard 100% Whey Proteinn
@@ -201,6 +207,7 @@ const ProductSlider = () => {
                 height={240}
                 priority
               />
+              <FavoriteBorderOutlinedIcon className='wishlist-icon' width={60} height={60} />
               <h6>Category</h6>
               <h4 className="two-line-text">
                 Optimum Nutrition Gold Standard 100% Whey Proteinn
@@ -233,6 +240,7 @@ const ProductSlider = () => {
                 height={240}
                 priority
               />
+              <FavoriteBorderOutlinedIcon className='wishlist-icon' width={60} height={60} />
               <h6>Category</h6>
               <h4 className="two-line-text">
                 Optimum Nutrition Gold Standard 100% Whey Proteinn
@@ -265,6 +273,7 @@ const ProductSlider = () => {
                 height={240}
                 priority
               />
+              <FavoriteBorderOutlinedIcon className='wishlist-icon' width={60} height={60} />
               <h6>Category</h6>
               <h4 className="two-line-text">
                 Optimum Nutrition Gold Standard 100% Whey Proteinn
