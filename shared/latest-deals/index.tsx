@@ -9,10 +9,24 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import Rating from "@mui/material/Rating";
-import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 
 const LatestDeals = () => {
-    const [value, setValue] = useState<number>(2);
+  const [value, setValue] = useState<number>(2);
+
+  useEffect(() => {
+    const progressBar = document.querySelector(".progress-bar");
+    const progress = document.querySelector<HTMLElement>(".progress");
+    let progressWidth = 0;
+    function updateProgress() {
+      progressWidth += 10; // adjust based on your needs
+      if (progress) {
+        progress.style.width = `${progressWidth}%`;
+      }
+    }
+  }, []);
+
+  // adjust interval timing based on your needs
 
   return (
     <>
@@ -23,18 +37,19 @@ const LatestDeals = () => {
             <ArrowForwardIosIcon width={60} height={60} />
           </span>
           <h6>LIMITED QUANTITIES. HURRY UP!</h6>
-            <Timer/>
+          <Timer />
           <h5>View All Deals</h5>
         </div>
       </div>
-      <Swiper
+      <div className="product-slider-class">
+        <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={0}
-          slidesPerView={5}
+          slidesPerView={2}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
           navigation={true}
-          className="products-slider"
+          className="latest-deals-slider"
         >
           <SwiperSlide>
             <div className="product-card">
@@ -42,11 +57,17 @@ const LatestDeals = () => {
                 <Image
                   alt="nutritrix"
                   src="/fusionPC.jpg"
-                  width={240}
-                  height={240}
+                  width={230}
+                  height={230}
                   priority
                 />
-                <FavoriteBorderOutlinedIcon className='wishlist-icon' width={60} height={60} />
+                <FavoriteBorderOutlinedIcon
+                  className="wishlist-icon"
+                  width={60}
+                  height={60}
+                />
+              </div>
+              <div className="product-info">
                 <h6>Category</h6>
                 <h4 className="two-line-text">
                   Optimum Nutrition Gold Standard 100% Whey Proteinn
@@ -63,94 +84,37 @@ const LatestDeals = () => {
                 <div className="product-price">
                   <h5>$90.00</h5>
                 </div>
-                <button className="hover-up">
+                <p>Sold: <span>30/62</span></p>
+                <div className="progress-bar">
+                  <div className="progress"></div>
+                </div>
+                {/* <button className="hover-up">
                   <span>ADD TO CART</span>
-                </button>
+                </button> */}
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-          <div className="product-card">
-            <div className="product-image">
-              <Image
-                alt="nutritrix"
-                src="/goldPC.jpg"
-                width={240}
-                height={240}
-                priority
-              />
-              <FavoriteBorderOutlinedIcon className='wishlist-icon' width={60} height={60} />
-              <h6>Category</h6>
-              <h4 className="two-line-text">
-                Optimum Nutrition Gold Standard 100% Whey Proteinn
-              </h4>
-              <div className="stars-rating">
-                <Rating
-                  className="stars"
-                  name="read-only"
-                  value={value}
-                  readOnly
+            <div className="product-card">
+              <div className="product-image">
+                <Image
+                  alt="nutritrix"
+                  src="/grassPC.jpg"
+                  width={230}
+                  height={230}
+                  priority
                 />
-                <span className="stars-count">(3)</span>
-              </div>
-              <div className="product-price">
-                <h5>$90.00</h5>
-              </div>
-               <button className="hover-up">
-                  <span>ADD TO CART</span>
-                </button>
-            </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-          <div className="product-card">
-            <div className="product-image">
-              <Image
-                alt="nutritrix"
-                src="/grassPC.jpg"
-                width={240}
-                height={240}
-                priority
-              />
-              <FavoriteBorderOutlinedIcon className='wishlist-icon' width={60} height={60} />
-              <h6>Category</h6>
-              <h4 className="two-line-text">
-                Optimum Nutrition Gold Standard 100% Whey Proteinn
-              </h4>
-              <div className="stars-rating">
-                <Rating
-                  className="stars"
-                  name="read-only"
-                  value={value}
-                  readOnly
+                <FavoriteBorderOutlinedIcon
+                  className="wishlist-icon"
+                  width={60}
+                  height={60}
                 />
-                <span className="stars-count">(3)</span>
               </div>
-              <div className="product-price">
-                <h5>$90.00</h5>
-              </div>
-               <button className="hover-up">
-                  <span>ADD TO CART</span>
-                </button>
-            </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-          <div className="product-card">
-            <div className="product-image">
-              <Image
-                alt="nutritrix"
-                src="/maxPC.jpg"
-                width={240}
-                height={240}
-                priority
-              />
-              <FavoriteBorderOutlinedIcon className='wishlist-icon' width={60} height={60} />
-              <h6>Category</h6>
-              <h4 className="two-line-text">
-                Optimum Nutrition Gold Standard 100% Whey Proteinn
-              </h4>
-              <div>
+              <div className="product-info">
+                <h6>Category</h6>
+                <h4 className="two-line-text">
+                  Optimum Nutrition Gold Standard 100% Whey Proteinn
+                </h4>
                 <div className="stars-rating">
                   <Rating
                     className="stars"
@@ -160,148 +124,236 @@ const LatestDeals = () => {
                   />
                   <span className="stars-count">(3)</span>
                 </div>
-                <div className="product-price"></div>
-                <h5>$90.00</h5>
-              </div>
-               <button className="hover-up">
+                <div className="product-price">
+                  <h5>$90.00</h5>
+                </div>
+                <p>Sold: <span>30/62</span></p>
+                <div className="progress-bar">
+                  <div className="progress"></div>
+                </div>
+                {/* <button className="hover-up">
                   <span>ADD TO CART</span>
-                </button>
-            </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-          <div className="product-card">
-            <div className="product-image">
-              <Image
-                alt="nutritrix"
-                src="/naturePC.jpg"
-                width={240}
-                height={240}
-                priority
-              />
-              <FavoriteBorderOutlinedIcon className='wishlist-icon' width={60} height={60} />
-              <h6>Category</h6>
-              <h4 className="two-line-text">
-                Optimum Nutrition Gold Standard 100% Whey Proteinn
-              </h4>
-              <div className="stars-rating">
-                <Rating
-                  className="stars"
-                  name="read-only"
-                  value={value}
-                  readOnly
-                />
-                <span className="stars-count">(3)</span>
+                </button> */}
               </div>
-              <div className="product-price">
-                <h5>$90.00</h5>
-              </div>
-               <button className="hover-up">
-                  <span>ADD TO CART</span>
-                </button>
-            </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-          <div className="product-card">
-            <div className="product-image">
-              <Image
-                alt="nutritrix"
-                src="/nitroPC.jpg"
-                width={240}
-                height={240}
-                priority
-              />
-              <FavoriteBorderOutlinedIcon className='wishlist-icon' width={60} height={60} />
-              <h6>Category</h6>
-              <h4 className="two-line-text">
-                Optimum Nutrition Gold Standard 100% Whey Proteinn
-              </h4>
-              <div className="stars-rating">
-                <Rating
-                  className="stars"
-                  name="read-only"
-                  value={value}
-                  readOnly
-                />
-                <span className="stars-count">(3)</span>
-              </div>
-              <div className="product-price">
-                <h5>$90.00</h5>
-              </div>
-              <button className="hover-up">
-                  <span>ADD TO CART</span>
-                </button>
-            </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="product-card">
-            <div className="product-image">
-              <Image
-                alt="nutritrix"
-                src="/standPC.jpg"
-                width={240}
-                height={240}
-                priority
-              />
-              <FavoriteBorderOutlinedIcon className='wishlist-icon' width={60} height={60} />
-              <h6>Category</h6>
-              <h4 className="two-line-text">
-                Optimum Nutrition Gold Standard 100% Whey Proteinn
-              </h4>
-              <div className="stars-rating">
-                <Rating
-                  className="stars"
-                  name="read-only"
-                  value={value}
-                  readOnly
+              <div className="product-image">
+                <Image
+                  alt="nutritrix"
+                  src="/maxPC.jpg"
+                  width={230}
+                  height={230}
+                  priority
                 />
-                <span className="stars-count">(3)</span>
+                <FavoriteBorderOutlinedIcon
+                  className="wishlist-icon"
+                  width={60}
+                  height={60}
+                />
               </div>
-              <div className="product-price">
-                <h5>$90.00</h5>
-              </div>
-               <button className="hover-up">
+              <div className="product-info">
+                <h6>Category</h6>
+                <h4 className="two-line-text">
+                  Optimum Nutrition Gold Standard 100% Whey Proteinn
+                </h4>
+                <div className="stars-rating">
+                  <Rating
+                    className="stars"
+                    name="read-only"
+                    value={value}
+                    readOnly
+                  />
+                  <span className="stars-count">(3)</span>
+                </div>
+                <div className="product-price">
+                  <h5>$90.00</h5>
+                </div>
+                <p>Sold: <span>30/62</span></p>
+                <div className="progress-bar">
+                  <div className="progress"></div>
+                </div>
+                {/* <button className="hover-up">
                   <span>ADD TO CART</span>
-                </button>
-            </div>
+                </button> */}
+              </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="product-card">
-            <div className="product-image">
-              <Image
-                alt="nutritrix"
-                src="/workPC.jpg"
-                width={240}
-                height={240}
-                priority
-              />
-              <FavoriteBorderOutlinedIcon className='wishlist-icon' width={60} height={60} />
-              <h6>Category</h6>
-              <h4 className="two-line-text">
-                Optimum Nutrition Gold Standard 100% Whey Proteinn
-              </h4>
-              <div className="stars-rating">
-                <Rating
-                  className="stars"
-                  name="read-only"
-                  value={value}
-                  readOnly
+              <div className="product-image">
+                <Image
+                  alt="nutritrix"
+                  src="/naturePC.jpg"
+                  width={230}
+                  height={230}
+                  priority
                 />
-                <span className="stars-count">(3)</span>
+                <FavoriteBorderOutlinedIcon
+                  className="wishlist-icon"
+                  width={60}
+                  height={60}
+                />
               </div>
-              <div className="product-price">
-                <h5>$90.00</h5>
-              </div>
-               <button className="hover-up">
+              <div className="product-info">
+                <h6>Category</h6>
+                <h4 className="two-line-text">
+                  Optimum Nutrition Gold Standard 100% Whey Proteinn
+                </h4>
+                <div className="stars-rating">
+                  <Rating
+                    className="stars"
+                    name="read-only"
+                    value={value}
+                    readOnly
+                  />
+                  <span className="stars-count">(3)</span>
+                </div>
+                <div className="product-price">
+                  <h5>$90.00</h5>
+                </div>
+                <p>Sold: <span>30/62</span></p>
+                <div className="progress-bar">
+                  <div className="progress"></div>
+                </div>
+                {/* <button className="hover-up">
                   <span>ADD TO CART</span>
-                </button>
+                </button> */}
+              </div>
             </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="product-card">
+              <div className="product-image">
+                <Image
+                  alt="nutritrix"
+                  src="/nitroPC.jpg"
+                  width={230}
+                  height={230}
+                  priority
+                />
+                <FavoriteBorderOutlinedIcon
+                  className="wishlist-icon"
+                  width={60}
+                  height={60}
+                />
+              </div>
+              <div className="product-info">
+                <h6>Category</h6>
+                <h4 className="two-line-text">
+                  Optimum Nutrition Gold Standard 100% Whey Proteinn
+                </h4>
+                <div className="stars-rating">
+                  <Rating
+                    className="stars"
+                    name="read-only"
+                    value={value}
+                    readOnly
+                  />
+                  <span className="stars-count">(3)</span>
+                </div>
+                <div className="product-price">
+                  <h5>$90.00</h5>
+                </div>
+                <p>Sold: <span>30/62</span></p>
+                <div className="progress-bar">
+                  <div className="progress"></div>
+                </div>
+                {/* <button className="hover-up">
+                  <span>ADD TO CART</span>
+                </button> */}
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="product-card">
+              <div className="product-image">
+                <Image
+                  alt="nutritrix"
+                  src="/standPC.jpg"
+                  width={230}
+                  height={230}
+                  priority
+                />
+                <FavoriteBorderOutlinedIcon
+                  className="wishlist-icon"
+                  width={60}
+                  height={60}
+                />
+              </div>
+              <div className="product-info">
+                <h6>Category</h6>
+                <h4 className="two-line-text">
+                  Optimum Nutrition Gold Standard 100% Whey Proteinn
+                </h4>
+                <div className="stars-rating">
+                  <Rating
+                    className="stars"
+                    name="read-only"
+                    value={value}
+                    readOnly
+                  />
+                  <span className="stars-count">(3)</span>
+                </div>
+                <div className="product-price">
+                  <h5>$90.00</h5>
+                </div>
+                <p>Sold: <span>30/62</span></p>
+                <div className="progress-bar">
+                  <div className="progress"></div>
+                </div>
+                {/* <button className="hover-up">
+                  <span>ADD TO CART</span>
+                </button> */}
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="product-card">
+              <div className="product-image">
+                <Image
+                  alt="nutritrix"
+                  src="/workPC.jpg"
+                  width={230}
+                  height={230}
+                  priority
+                />
+                <FavoriteBorderOutlinedIcon
+                  className="wishlist-icon"
+                  width={60}
+                  height={60}
+                />
+              </div>
+              <div className="product-info">
+                <h6>Category</h6>
+                <h4 className="two-line-text">
+                  Optimum Nutrition Gold Standard 100% Whey Proteinn
+                </h4>
+                <div className="stars-rating">
+                  <Rating
+                    className="stars"
+                    name="read-only"
+                    value={value}
+                    readOnly
+                  />
+                  <span className="stars-count">(3)</span>
+                </div>
+                <div className="product-price">
+                  <h5>$90.00</h5>
+                </div>
+                <p>Sold: <span>30/62</span></p>
+                <div className="progress-bar">
+                  <div className="progress"></div>
+                </div>
+                {/* <button className="hover-up">
+                  <span>ADD TO CART</span>
+                </button> */}
+              </div>
             </div>
           </SwiperSlide>
         </Swiper>
+      </div>
     </>
   );
 };

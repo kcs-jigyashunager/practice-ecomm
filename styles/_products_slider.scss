@@ -5,7 +5,7 @@
     background-color: $background;
     font-weight: 700;
     border-radius: 50%;
-    top: 48% !important;
+    top: 45% !important;
 }
 
 .products-slider .swiper-slide{
@@ -17,10 +17,10 @@
 .products-slider {
     h6{
         margin-left: 20px;
-        font-size: 13px;
-        display:inline-block;
-        border-bottom:2px solid $background;
-        padding-bottom:4px;
+        font-size: 12px;
+        text-decoration: underline;
+        margin-top: 15px;
+        color: #807f7f;
     }
     h6:hover{
         color: $text-color;
@@ -39,10 +39,10 @@
 
 .product-slider-class .swiper, swiper-container{
   margin-top: -25px !important;
-  margin-right: 42px !important;
+  margin-right: 50px !important;
   margin-left: 52px !important;
   padding-right: 5px !important;
-  padding-left: 14px !important;
+  padding-left: 9px !important;
 }
 
 .two-line-text {
@@ -189,8 +189,66 @@
 
 .wishlist-icon{
   position: absolute;
-  margin: -235px 0px 0px 205px;
-  height: 35px;
+  margin: 5px 0px 0px -35px;
+  height: 29px;
   width: 25px;
   color: grayscale($color: #807f7f);
+}
+
+.product-card-image{
+  margin-left: 13px;
+}
+
+.latest-deals-slider .product-card{
+  display: flex;
+  margin-bottom: 50px;
+  h6{
+    font-size: 12px;
+    text-decoration: underline;
+    margin-top: 15px;
+    color: #807f7f;  
+  }
+  h6:hover{
+    color: $text-color;
+    cursor: pointer;
+  }
+  h4{
+    font-size: 16px;
+    width: 60%;
+  }
+  .stars-rating{
+    margin: 5px 0px 10px -19px;
+    font-size: 15px;
+  }
+  .stars{
+    font-size: 18px;
+  }
+  .hover-up{
+    margin: 0px 0px 0px 0px;
+  }
+  .product-info{
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+  .product-image{
+    margin-left: 40px;
+  }
+  .product-price{
+    margin-bottom: 20px;
+  }
+  .progress-bar {
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+    background-color: grey;
+    margin-top: -10px;
+  }
+  
+  .progress {
+    height: 100%;
+    width: 52%;
+    border-radius: 10px;
+    background-color: $background;
+  }
+  
 }

@@ -37,9 +37,10 @@ const ProductSlider = () => {
                 <Image
                   alt="nutritrix"
                   src="/fusionPC.jpg"
-                  width={240}
-                  height={240}
+                  width={200}
+                  height={200}
                   priority
+                  className='product-card-image'
                 />
                 <FavoriteBorderOutlinedIcon className='wishlist-icon' width={60} height={60} />
                 <h6>Category</h6>
@@ -70,9 +71,10 @@ const ProductSlider = () => {
               <Image
                 alt="nutritrix"
                 src="/goldPC.jpg"
-                width={240}
-                height={240}
+                width={200}
+                height={200}
                 priority
+                className='product-card-image'
               />
               <FavoriteBorderOutlinedIcon className='wishlist-icon' width={60} height={60} />
               <h6>Category</h6>
@@ -103,9 +105,10 @@ const ProductSlider = () => {
               <Image
                 alt="nutritrix"
                 src="/grassPC.jpg"
-                width={240}
-                height={240}
+                width={200}
+                height={200}
                 priority
+                className='product-card-image'
               />
               <FavoriteBorderOutlinedIcon className='wishlist-icon' width={60} height={60} />
               <h6>Category</h6>
@@ -136,9 +139,10 @@ const ProductSlider = () => {
               <Image
                 alt="nutritrix"
                 src="/maxPC.jpg"
-                width={240}
-                height={240}
+                width={200}
+                height={200}
                 priority
+                className='product-card-image'
               />
               <FavoriteBorderOutlinedIcon className='wishlist-icon' width={60} height={60} />
               <h6>Category</h6>
@@ -170,9 +174,10 @@ const ProductSlider = () => {
               <Image
                 alt="nutritrix"
                 src="/naturePC.jpg"
-                width={240}
-                height={240}
+                width={200}
+                height={200}
                 priority
+                className='product-card-image'
               />
               <FavoriteBorderOutlinedIcon className='wishlist-icon' width={60} height={60} />
               <h6>Category</h6>
@@ -203,9 +208,10 @@ const ProductSlider = () => {
               <Image
                 alt="nutritrix"
                 src="/nitroPC.jpg"
-                width={240}
-                height={240}
+                width={200}
+                height={200}
                 priority
+                className='product-card-image'
               />
               <FavoriteBorderOutlinedIcon className='wishlist-icon' width={60} height={60} />
               <h6>Category</h6>
@@ -236,9 +242,10 @@ const ProductSlider = () => {
               <Image
                 alt="nutritrix"
                 src="/standPC.jpg"
-                width={240}
-                height={240}
+                width={200}
+                height={200}
                 priority
+                className='product-card-image'
               />
               <FavoriteBorderOutlinedIcon className='wishlist-icon' width={60} height={60} />
               <h6>Category</h6>
@@ -269,9 +276,10 @@ const ProductSlider = () => {
               <Image
                 alt="nutritrix"
                 src="/workPC.jpg"
-                width={240}
-                height={240}
+                width={200}
+                height={200}
                 priority
+                className='product-card-image'
               />
               <FavoriteBorderOutlinedIcon className='wishlist-icon' width={60} height={60} />
               <h6>Category</h6>
