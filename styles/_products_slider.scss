@@ -9,9 +9,9 @@
 }
 
 .products-slider .swiper-slide{
-    width: 230px!important;
-    margin-left: 15px !important;
-    margin-right: 15px !important;
+  width: 230px !important;
+  margin-left: -4px !important;
+  margin-right: -4px !important;
 }
 
 .products-slider {
@@ -38,11 +38,11 @@
 }    
 
 .product-slider-class .swiper, swiper-container{
-  margin-top: -25px !important;
-  margin-right: 50px !important;
-  margin-left: 52px !important;
-  padding-right: 5px !important;
-  padding-left: 9px !important;
+  margin-top: -10px !important;
+  margin-right: 143px !important;
+  margin-left: 145px !important;
+  padding-right: 0px !important;
+  padding-left: 18px !important;
 }
 
 .two-line-text {
@@ -243,12 +243,29 @@
     background-color: grey;
     margin-top: -10px;
   }
-  
   .progress {
     height: 100%;
     width: 52%;
     border-radius: 10px;
     background-color: $background;
   }
-  
+
+}
+
+.banner-ad{
+  width: -webkit-fill-available;
+}
+
+.latest-deals-slider  .swiper-slide, swiper-slide {
+  margin: 0px 15px 0px -20px;
+
+}
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+  right: var(--swiper-navigation-sides-offset,0px) !important;
+  left: auto;
+}
+
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+  left: var(--swiper-navigation-sides-offset,0px) !important;
+  right: auto;
 }

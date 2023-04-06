@@ -1,5 +1,6 @@
 $main-font: fantasy;
-$margin-page: 0px 60px 0px 60px;
+$margin-page-small-content: 0px 60px 0px 95px;
+$margin-page-large-content: 0px 60px 0px 60px;
 
 .goals-heading{
     text-align: center;
@@ -22,7 +23,7 @@ $margin-page: 0px 60px 0px 60px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: $margin-page;
+    margin: $margin-page-large-content;
     div{
         background-color: #EFEFEF;
         padding: 51px;
@@ -84,7 +85,7 @@ $margin-page: 0px 60px 0px 60px;
         font-family: $main-font;
         display: inline-flex;
         align-items: center;
-        margin: $margin-page;
+        margin: $margin-page-large-content;
         padding-top: 60px;
         margin-bottom: 50px;
     span{
@@ -101,7 +102,7 @@ $margin-page: 0px 60px 0px 60px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: $margin-page;
+    margin: $margin-page-large-content;
     .popular-categories-content{
         margin-left: 60px;
         margin-right: 60px;
@@ -129,7 +130,39 @@ $margin-page: 0px 60px 0px 60px;
 }
 
 .banner{
-    margin: $margin-page;
+    margin: $margin-page-large-content;
     margin-top: 60px;
     margin-bottom: 60px;
+}
+
+.banner-three{
+    margin: $margin-page-small-content;
+    display: flex;
+    margin-bottom: 60px;
+    .image-container {
+        /* Set the container size to the original size of the image */
+        margin: 15px 0px 0px 12px;
+        overflow: hidden; /* Clip the overflow */
+        position: relative; /* Create a stacking context for child elements */
+      }
+      
+      .image-container img:hover {
+        /* Apply the zoom effect */
+        transform: scale(1.1); /* Zoom by 10% */
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: 0.3s;
+      }
+    .banner-ad-three-content{
+        margin-top: -222px;
+        position: absolute;
+        margin-left: 32px;
+    }
+    .banner-ad-three-content-3{
+        margin-top: -222px;
+        position: absolute;
+        margin-left: 32px;
+    }
 }
