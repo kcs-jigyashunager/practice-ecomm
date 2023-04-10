@@ -68,9 +68,9 @@
     font-size: 15px;
 }
 
-  .hover-up {
-    padding: 10px 59px 10px 59px;
-    margin-left: 10px;
+  .hover-up {    
+    padding: 10px 50px 10px 50px;
+    margin-left: 15px;
     position: relative;
     overflow: hidden;
     border: none;
@@ -214,7 +214,6 @@
   }
   h4{
     font-size: 16px;
-    width: 60%;
   }
   .stars-rating{
     margin: 5px 0px 10px -19px;
@@ -257,9 +256,9 @@
 }
 
 .latest-deals-slider  .swiper-slide, swiper-slide {
-  margin: 0px 15px 0px -20px;
-
+  margin: 0px 20px 0px -20px;
 }
+
 .swiper-button-next, .swiper-rtl .swiper-button-prev {
   right: var(--swiper-navigation-sides-offset,0px) !important;
   left: auto;
@@ -268,4 +267,18 @@
 .swiper-button-prev, .swiper-rtl .swiper-button-next {
   left: var(--swiper-navigation-sides-offset,0px) !important;
   right: auto;
+}
+.swiper-button-next, .swiper-button-prev {
+  top: 45% !important;
+}
+
+@media (min-width: 1500px) {
+  /* Your styles here */
+  .product-slider-class .swiper, swiper-container{
+      margin-top: -10px !important;
+      margin-right: 195px !important;
+      margin-left: 195px !important;
+      padding-right: 0px !important;
+      padding-left: 11px !important;
+  }
 }

@@ -31,8 +31,8 @@ const Banner = () => {
       </div>
           <div className='bannner-ad-three-content'>
             <h5>TOP PRODUCTS</h5>
-            <h6>TRUE STRENGHT OF WHEY</h6>
-            <button>Shop Now</button>
+            <h6>TRUE STRENGTH OF WHEY</h6>
+            <button>SHOP NOW</button>
           </div>
       </div>
       <div>
@@ -49,7 +49,7 @@ const Banner = () => {
           <div className='bannner-ad-three-content'>
             <h5>SAVING PLAN</h5>
             <h6>15% OFF ALL PRODUCTS</h6>
-            <button>Shop Now</button>
+            <button>SHOP NOW</button>
           </div>
       </div>
       <div>
@@ -63,10 +63,10 @@ const Banner = () => {
             priority
           />
       </div>
-          <div className='bannner-ad-three-content'>
+          <div className='bannner-ad-three-content-3'>
             <h5>BUILD UP MUSCLE</h5>
             <h6>PROTIEN POWDER COLLECTION</h6>
-            <button>Shop Now</button>
+            <button>SHOP NOW</button>
           </div>
         </div>
       </div>

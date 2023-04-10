@@ -1,15 +1,18 @@
 $main-font: fantasy;
 $margin-page-small-content: 0px 60px 0px 95px;
 $margin-page-large-content: 0px 60px 0px 60px;
+$tranform: skewX(-10deg);
+$text-gray: #807f7f;
 
-.goals-heading{
+.goals-heading {
     text-align: center;
     margin-top: 50px;
     font-family: $main-font;
     display: flex;
     align-items: center;
     margin-left: 60px;
-    span{
+
+    span {
         margin-right: 10px;
         margin-top: -10px;
         color: $background;
@@ -19,12 +22,13 @@ $margin-page-large-content: 0px 60px 0px 60px;
     }
 }
 
-.user-goals{
+.user-goals {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: $margin-page-large-content;
-    div{
+
+    div {
         background-color: #EFEFEF;
         padding: 51px;
         margin-left: 5px;
@@ -32,24 +36,28 @@ $margin-page-large-content: 0px 60px 0px 60px;
         margin-top: 50px;
         max-height: 350px;
     }
+
     div:hover span {
         border-bottom: white;
-        padding-bottom:2px;
-        display:inline-block;
-        border-bottom:2px solid white;
-        padding-bottom:2px;
+        padding-bottom: 2px;
+        display: inline-block;
+        border-bottom: 2px solid white;
+        padding-bottom: 2px;
     }
-    div:hover{
+
+    div:hover {
         background-color: $background;
         color: white;
         transition: 0.4s;
         cursor: pointer;
     }
-    div:hover img{
+
+    div:hover img {
         margin-top: 26px;
         transition: 0.4s;
     }
-    img{
+
+    img {
         display: flex;
         margin: 0 auto;
         vertical-align: middle;
@@ -57,112 +65,252 @@ $margin-page-large-content: 0px 60px 0px 60px;
         height: 300px;
         margin-top: 60px;
     }
-    h4{
+
+    h4 {
         font-family: $main-font;
         text-align: center;
         margin-top: -30px;
         white-space: nowrap;
     }
-    h6{
+
+    h6 {
         text-align: center;
     }
-    span{
-        display:inline-block;
-        border-bottom:2px solid $background;
-        padding-bottom:2px;
+
+    span {
+        display: inline-block;
+        border-bottom: 2px solid $background;
+        padding-bottom: 2px;
     }
 }
 
-.homepage-popular-categories{
+.homepage-popular-categories {
     z-index: 99;
     position: relative;
     background-color: white;
-   
+
 }
 
-.popular-categories-heading{
-        text-align: center;
-        font-family: $main-font;
-        display: inline-flex;
-        align-items: center;
-        margin: $margin-page-large-content;
-        padding-top: 60px;
-        margin-bottom: 50px;
-    span{
-            margin-right: 10px;
-            margin-top: -10px;
-            color: $background;
-            font-weight: 900;
-            stroke: $background;
-            stroke-width: 4;
+.popular-categories-heading {
+    text-align: center;
+    font-family: $main-font;
+    display: inline-flex;
+    align-items: center;
+    margin: $margin-page-large-content;
+    padding-top: 60px;
+    margin-bottom: 50px;
+
+    span {
+        margin-right: 10px;
+        margin-top: -10px;
+        color: $background;
+        font-weight: 900;
+        stroke: $background;
+        stroke-width: 4;
     }
 }
 
-.popular-categories{
+.popular-categories {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: $margin-page-large-content;
-    .popular-categories-content{
+
+    .popular-categories-content {
         margin-left: 60px;
         margin-right: 60px;
     }
-    h6{
+
+    h6 {
         text-align: center;
         font-size: 15px;
         white-space: nowrap;
         margin-top: 15px;
     }
-    img{
+
+    img {
         display: flex;
         margin: 0 auto;
         vertical-align: middle;
     }
-    div:hover img{
+
+    div:hover img {
         transform: scale(1.2);
     }
-    div:hover img, div:hover h6  {
-        transition: 0.4s;    
+
+    div:hover img,
+    div:hover h6 {
+        transition: 0.4s;
         color: $text-color;
         cursor: pointer;
     }
-    
+
 }
 
-.banner{
+.banner {
     margin: $margin-page-large-content;
     margin-top: 60px;
     margin-bottom: 60px;
 }
 
-.banner-three{
-    margin: $margin-page-small-content;
+.banner-three {
+    margin: 0px 60px 0px 60px;
     display: flex;
-    margin-bottom: 60px;
+    justify-content: center;
+    align-items: center;
+
     .image-container {
         /* Set the container size to the original size of the image */
         margin: 15px 0px 0px 12px;
-        overflow: hidden; /* Clip the overflow */
-        position: relative; /* Create a stacking context for child elements */
-      }
-      
-      .image-container img:hover {
+        overflow: hidden;
+        /* Clip the overflow */
+        position: relative;
+        /* Create a stacking context for child elements */
+    }
+
+    .image-container img:hover {
         /* Apply the zoom effect */
-        transform: scale(1.1); /* Zoom by 10% */
+        transform: scale(1.1);
+        /* Zoom by 10% */
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
         transition: 0.3s;
-      }
-    .banner-ad-three-content{
-        margin-top: -222px;
-        position: absolute;
-        margin-left: 32px;
     }
-    .banner-ad-three-content-3{
-        margin-top: -222px;
-        position: absolute;
-        margin-left: 32px;
+
+    button {
+        font-family: $ui-font;
+        transform: skewX(-10deg);
+        border-radius: 2px;
+        border: 0px;
+        pointer-events: all;
     }
 }
+
+.bannner-ad-three-content {
+    position: absolute;
+    margin: -210px 0px 0px 50px;
+    font-family: $main-font;
+    pointer-events: none;
+
+    /* This allows mouse events to pass through the text div */
+    h5 {
+        font-family: system-ui;
+        color: orange;
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    h6 {
+        font-family: $main-font;
+        display: -webkit-boxl;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        width: 70%;
+        color: white;
+        font-size: 28px;
+    }
+
+}
+
+.bannner-ad-three-content:hover {
+    button {
+        color: white;
+        transition: 0.3s;
+        font-size: 16px;
+        background-color: $background;
+    }
+}
+
+.bannner-ad-three-content-3:hover {
+    button {
+        color: white;
+        transition: 0.3s;
+        font-size: 16px;
+        background-color: $background;
+    }
+}
+
+.bannner-ad-three-content-3 {
+    position: absolute;
+    margin: -210px 0px 0px 195px;
+    pointer-events: none;
+
+    /* This allows mouse events to pass through the text div */
+    h6 {
+        width: 70%;
+        font-family: $main-font;
+        display: -webkit-boxl;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        color: white;
+        font-size: 28px;
+    }
+
+    h5 {
+        color: orange;
+        font-family: system-ui;
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+}
+
+.products-section {
+    display: flex;
+    color: gainsboro;
+    font-family: $main-font;
+    justify-content: center;
+    align-items: center;
+
+    h4 {
+        font-size: 16px;
+        cursor: pointer;
+        padding: 6px;
+        margin-left: 10px;
+        transform: $tranform;
+        border-radius: 5px;
+    }
+
+    h4:hover {
+        background-color: black;
+        color:  white;
+    }
+
+    .selected-heading {
+        background-color: black;
+        color: white;
+    }
+}
+
+.product-section-class {
+    .popular-categories-heading {
+        display: flex;
+        justify-content: space-between;
+    }
+    .swiper, swiper-container{
+        margin-top: -10px !important;
+        margin-right: 143px !important;
+        margin-left: 145px !important;
+        padding-right: 0px !important;
+        padding-left: 18px !important;
+    }
+    .arrow-icon{
+        margin: -4px 0px 0px 0px;
+
+    }
+}
+
+
+@media (min-width: 1500px) {
+    /* Your styles here */
+    .product-section-class .swiper, .product-section-class swiper-container{
+        margin-top: -10px !important;
+        margin-right: 195px !important;
+        margin-left: 195px !important;
+        padding-right: 0px !important;
+        padding-left: 12px !important;
+    }
+  }
