@@ -5,6 +5,7 @@ import ProductSlider from "@/shared/products-slider";
 import React, { useState, useEffect } from "react";
 import Header from "../main-header";
 import ProductsSection from "../../shared/products-section-sliders";
+import Brands from "@/shared/brands";
 
 const Homepage = () => {
   return (
@@ -15,9 +16,10 @@ const Homepage = () => {
       <ProductSlider/>
       <Banner/>
       <ProductsSection heading="VITAMINS & MINERALS"/>
-      <Banner/>
       <ProductsSection heading="RECOVERY & REPAIR"/>
       <ProductsSection heading="ENERGY & ENDURANCE"/>
+      <ProductsSection heading="WORKOUT ESSENTIALS"/>
+      <Brands/>
     </>
   );
 };

@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import Slider from "@/shared/slider";
 
 const ProductsSection = ({ heading }: { heading: string }) => {
 
@@ -314,6 +315,7 @@ const ProductsSection = ({ heading }: { heading: string }) => {
                         </SwiperSlide>
                         </Swiper>
                     </div>
+                    <Slider value={heading}/>
 
         </>
     );

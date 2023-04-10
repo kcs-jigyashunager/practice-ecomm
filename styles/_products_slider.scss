@@ -9,9 +9,11 @@
 }
 
 .products-slider .swiper-slide{
-  width: 230px !important;
+  width: 260px !important;
   margin-left: -4px !important;
   margin-right: -4px !important;
+  justify-content: center;
+  display: flex;
 }
 
 .products-slider {
@@ -28,7 +30,8 @@
     }
     h4{
         margin-left: 20px;
-        font-size: 16px;
+        font-size: 14px;
+        width: 80%;
     }
     h5{
         margin-left: 20px;
@@ -39,8 +42,8 @@
 
 .product-slider-class .swiper, swiper-container{
   margin-top: -10px !important;
-  margin-right: 143px !important;
-  margin-left: 145px !important;
+  margin-right: 85px !important;
+  margin-left: 85px !important;
   padding-right: 0px !important;
   padding-left: 18px !important;
 }
@@ -196,7 +199,7 @@
 }
 
 .product-card-image{
-  margin-left: 13px;
+  margin-left: 15px;
 }
 
 .latest-deals-slider .product-card{
@@ -257,6 +260,8 @@
 
 .latest-deals-slider  .swiper-slide, swiper-slide {
   margin: 0px 20px 0px -20px;
+  justify-content: center;
+    display: flex;
 }
 
 .swiper-button-next, .swiper-rtl .swiper-button-prev {
