@@ -204,7 +204,7 @@ $text-gray: #807f7f;
 
     h6 {
         font-family: $main-font;
-        display: -webkit-boxl;
+        display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;
@@ -335,9 +335,31 @@ $text-gray: #807f7f;
 
 .brands-main{
     .main-slider-offer{
-    margin: 40px 95px 0px 100px;
+        margin: 40px 95px 0px 160px;
+    }
+
 }
 
+.headings-why-nutritrix{
+    margin: $margin-page-large-content;
+    padding-top: 50px;
+    h6{
+        color: $text-color;
+    }
+    h2{
+        font-size: 54px;
+        font-family: $main-font;
+        width: 40%;
+        font-style: italic;
+    }
+}
+.pointers-why-nutritrix {
+    display: grid;
+    grid-template-columns: 400px 400px;
+    grid-row: auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    margin: 50px 0px 0px 60px;
 }
 
 @media (min-width: 1500px) {

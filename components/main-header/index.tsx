@@ -80,7 +80,7 @@ function CollapsibleExample() {
         </Container>
       </Navbar>
       <PagesHeader />
-      <Slider/>
+      <Slider value=""/>
     </>
   );
 }

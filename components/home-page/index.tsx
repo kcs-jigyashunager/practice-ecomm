@@ -6,6 +6,7 @@ import React, { useState, useEffect } from "react";
 import Header from "../main-header";
 import ProductsSection from "../../shared/products-section-sliders";
 import Brands from "@/shared/brands";
+import WhyNutritrix from "@/shared/whynutritrix";
 
 const Homepage = () => {
   return (
@@ -20,6 +21,7 @@ const Homepage = () => {
       <ProductsSection heading="ENERGY & ENDURANCE"/>
       <ProductsSection heading="WORKOUT ESSENTIALS"/>
       <Brands/>
+      <WhyNutritrix/>
     </>
   );
 };
