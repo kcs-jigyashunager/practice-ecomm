@@ -9,10 +9,11 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import Rating from "@mui/material/Rating";
-import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 
 const LatestDeals = () => {
   const [value, setValue] = useState<number>(2);
+  const [color, setColor] = useState<boolean>(false);
 
   useEffect(() => {
     const progressBar = document.querySelector(".progress-bar");
@@ -61,8 +62,8 @@ const LatestDeals = () => {
                   height={230}
                   priority
                 />
-                <FavoriteBorderOutlinedIcon
-                  className="wishlist-icon"
+                <FavoriteOutlinedIcon onClick={() => setColor(!color)}
+                  className={color? "wishlist-icon-color" : "wishlist-icon"}
                   width={60}
                   height={60}
                 />
@@ -104,8 +105,8 @@ const LatestDeals = () => {
                   height={230}
                   priority
                 />
-                <FavoriteBorderOutlinedIcon
-                  className="wishlist-icon"
+                <FavoriteOutlinedIcon onClick={() => setColor(!color)}
+                  className={color? "wishlist-icon-color" : "wishlist-icon"}
                   width={60}
                   height={60}
                 />
@@ -147,8 +148,8 @@ const LatestDeals = () => {
                   height={230}
                   priority
                 />
-                <FavoriteBorderOutlinedIcon
-                  className="wishlist-icon"
+                <FavoriteOutlinedIcon onClick={() => setColor(!color)}
+                  className={color? "wishlist-icon-color" : "wishlist-icon"}
                   width={60}
                   height={60}
                 />
@@ -190,8 +191,8 @@ const LatestDeals = () => {
                   height={230}
                   priority
                 />
-                <FavoriteBorderOutlinedIcon
-                  className="wishlist-icon"
+                <FavoriteOutlinedIcon onClick={() => setColor(!color)}
+                  className={color? "wishlist-icon-color" : "wishlist-icon"}
                   width={60}
                   height={60}
                 />
@@ -233,8 +234,8 @@ const LatestDeals = () => {
                   height={230}
                   priority
                 />
-                <FavoriteBorderOutlinedIcon
-                  className="wishlist-icon"
+                <FavoriteOutlinedIcon onClick={() => setColor(!color)}
+                  className={color? "wishlist-icon-color" : "wishlist-icon"}
                   width={60}
                   height={60}
                 />
@@ -276,8 +277,8 @@ const LatestDeals = () => {
                   height={230}
                   priority
                 />
-                <FavoriteBorderOutlinedIcon
-                  className="wishlist-icon"
+                <FavoriteOutlinedIcon onClick={() => setColor(!color)}
+                  className={color? "wishlist-icon-color" : "wishlist-icon"}
                   width={60}
                   height={60}
                 />
@@ -319,8 +320,8 @@ const LatestDeals = () => {
                   height={230}
                   priority
                 />
-                <FavoriteBorderOutlinedIcon
-                  className="wishlist-icon"
+                <FavoriteOutlinedIcon onClick={() => setColor(!color)}
+                  className={color? "wishlist-icon-color" : "wishlist-icon"}
                   width={60}
                   height={60}
                 />
