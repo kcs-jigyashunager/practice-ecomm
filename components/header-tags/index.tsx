@@ -25,7 +25,12 @@ const PagesHeader = () => {
               onMouseEnter={showDropdown}
               onMouseLeave={hideDropdown}
             >
-              hello
+              <ul className="headings-best-sellers">
+                <li>Sport Nutrition</li>
+                <li>Health Nutrition</li>
+                <li>Fitness</li>
+                <li>Wellness</li>
+              </ul>
             </NavDropdown>
           </li>
           <li>
@@ -66,6 +71,18 @@ const PagesHeader = () => {
           </li>
           <li>
             <NavDropdown
+              title="Gift Card"
+              id="collasible-nav-dropdown"
+              className="search-dropdown"
+              show={name === "Gift Card" ? true : false}
+              onMouseEnter={showDropdown}
+              onMouseLeave={hideDropdown}
+            >
+              hello
+            </NavDropdown>
+          </li>
+          <li>
+            <NavDropdown
               title="Customer Support"
               id="collasible-nav-dropdown"
               className="search-dropdown"
@@ -76,6 +93,19 @@ const PagesHeader = () => {
               hello
             </NavDropdown>
           </li>
+          <li>
+            <NavDropdown
+              title="Store Locator"
+              id="collasible-nav-dropdown"
+              className="search-dropdown"
+              show={name === "Store Locator" ? true : false}
+              onMouseEnter={showDropdown}
+              onMouseLeave={hideDropdown}
+            >
+              hello
+            </NavDropdown>
+          </li>
+          
         </ul>
       </div>
     </>

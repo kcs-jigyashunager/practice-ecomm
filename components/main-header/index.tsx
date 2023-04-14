@@ -18,12 +18,67 @@ import Slider from "@/shared/slider";
 
 function CollapsibleExample() {
   const [show, setShow] = useState(false);
+  const [showCurrent, setShowCurrent] = useState<string>("sports-header-name");
+  const [defaultValue, setDefaultValue] = useState<boolean>(true);
+
   const showDropdown = (e: any) => {
     setShow(!show);
   };
   const hideDropdown = (e: any) => {
     setShow(false);
   };
+
+  useEffect(() => {
+    var getElement = document.getElementById('collasible-nav-dropdown');
+
+    if(getElement) {
+      var attributeValue = getElement.getAttribute('aria-expanded')
+      if(attributeValue){
+        setDefaultValue(true)
+      }
+  }
+
+
+    // Get the list item and hidden div elements
+    var listItemSports = document.getElementById("sports-header-name");
+    var listItemVitamins = document.getElementById("vitamins-header-name");
+    var listItemHerbs = document.getElementById("herbs-header-name");
+    var listItemHealth = document.getElementById("health-header-name");
+    var listItemFitness = document.getElementById("fitness-header-name");
+    var listItemWelness = document.getElementById("welness-header-name");
+
+    listItemSports?.addEventListener("mouseover", function () {
+      setShowCurrent("listItemSports");
+      setDefaultValue(false);
+    });
+
+    listItemVitamins?.addEventListener("mouseover", function () {
+      setShowCurrent("listItemVitamins");
+      setDefaultValue(false);
+    });
+
+    listItemHerbs?.addEventListener("mouseover", function () {
+      setShowCurrent("listItemHerbs");
+      setDefaultValue(false);
+    });
+
+    listItemHealth?.addEventListener("mouseover", function () {
+      setShowCurrent("listItemHealth");
+      setDefaultValue(false);
+    });
+
+    listItemFitness?.addEventListener("mouseover", function () {
+      setShowCurrent("listItemFitness");
+      setDefaultValue(false);
+    });
+
+    listItemWelness?.addEventListener("mouseover", function () {
+      setShowCurrent("listItemWelness");
+      setDefaultValue(false);
+    });
+  }, [show]);
+
+
   return (
     <>
       <HeaderHero />
@@ -48,7 +103,294 @@ function CollapsibleExample() {
               onMouseEnter={showDropdown}
               onMouseLeave={hideDropdown}
             >
-              hello
+              <ul className="categories-header">
+                <li id="sports-header-name">Sports Nutrition</li>
+                <li id="vitamins-header-name">Vitamins & Supplements</li>
+                <li id="herbs-header-name">Ayurveda & Herbs</li>
+                <li id="health-header-name">Health Food & Drinks</li>
+                <li id="fitness-header-name">Fitness</li>
+                <li id="welness-header-name">Welness</li>
+              </ul>
+              {showCurrent === "listItemSports" || defaultValue ? (
+                <div id="sports-category-show">
+                  <ul className="sports-category-list">
+                    <li className="top-heading">Proteins</li>
+                    <li>Whey Protein</li>
+                    <li>Beginners Whey Protei</li>
+                    <li>Whey Protein Isolat</li>
+                    <li>Raw Whey Protein</li>
+                    <li>Plant Protein</li>
+                    <li>Protein for Wome</li>
+                    <li>Protein Blends</li>
+                    <li>Casein Protein</li>
+                    <li>Soy Proteins</li>
+                  </ul>
+                  <ul className="sports-category-list">
+                    <li className="top-heading">Gainers</li>
+                    <li>Weight Gainers</li>
+                    <li>Mass Gainers</li>
+                    <li>Herbal Weight Gainers</li>
+                  </ul>
+                  <ul className="sports-category-list">
+                    <li className="top-heading">Protein Foods</li>
+                    <li>Peanut Butter</li>
+                    <li>Muesli</li>
+                    <li>Protein Shakes</li>
+                    <li>Oats</li>
+                    <li>Cereals</li>
+                    <li>Granola</li>
+                    <li>Protein Bars</li>
+                    <li>Protein Water</li>
+                  </ul>
+                  <ul className="sports-category-list">
+                    <li className="top-heading">Pre/Post Workout</li>
+                    <li>Pre-Workout</li>
+                    <li>Creatine</li>
+                    <li>Beta Alanine</li>
+                    <li>BCAAs</li>
+                    <li>Carb Blends</li>
+                    <li>Electrolytes</li>
+                    <li>EAA</li>
+                    <li>Nitric Oxide</li>
+                    <li>Other Supports</li>
+                    <li>Citrulline Malate</li>
+                  </ul>
+                  <ul className="sports-category-list">
+                    <li className="top-heading">Workout Essentials</li>
+                    <li>Fat Burners</li>
+                    <li>L Carnitine</li>
+                    <li>Multivitamins for Bodybuilding</li>
+                    <li>Pre Hormone</li>
+                    <li>ZMA</li>
+                  </ul>
+                </div>
+              ) : showCurrent === "listItemVitamins" ? (
+                <div id="vitamins-category-show">
+                  <ul className="sports-category-list">
+                    <li className="top-heading">Omega Fatty Acids</li>
+                    <li>Omega 3</li>
+                    <li>Fish Oil</li>
+                    <li>Flaxseed Oil</li>
+                    <li>Cod Liver Oil</li>
+                    <li>Krill Oil</li>
+                  </ul>
+                  <ul className="sports-category-list">
+                    <li className="top-heading">Multivitamins</li>
+                    <li>Multivitamins - Men</li>
+                    <li>Multivitamins - Women</li>
+                    <li>Multivitamins - General</li>
+                    <li>Multivitamins - Children</li>
+                  </ul>
+                  <ul className="sports-category-list">
+                    <li className="top-heading">Vitamins</li>
+                    <li>Vitamin C</li>
+                    <li>Biotin</li>
+                    <li>Vitamin B</li>
+                    <li>Vitamin B Complex with B12</li>
+                    <li>Vitamin D</li>
+                    <li>Vitamin A</li>
+                    <li>Vitamin K</li>
+                    <li>Vitamin E</li>
+                  </ul>
+                  <ul className="sports-category-list">
+                    <li className="top-heading">Minerals</li>
+                    <li>Calcium</li>
+                    <li>Magnesium</li>
+                    <li>Iron</li>
+                    <li>Chromium</li>
+                    <li>Zinc</li>
+                    <li>Selenium</li>
+                  </ul>
+                  <ul className="sports-category-list">
+                    <li className="top-heading">Antioxidants</li>
+                    <li>CoQ10</li>
+                    <li>Grape Seed Extract</li>
+                    <li>Alpha Lipoic Acid</li>
+                    <li>DHEA</li>
+                    <li>Glutathione</li>
+                    <li>Other Antioxidants</li>
+                  </ul>
+                </div>
+              ) : showCurrent === "listItemHerbs" ? (
+                <div id="herbs-category-show">
+                  <ul className="sports-category-list">
+                    <li className="top-heading">Herbs For Weight Loss</li>
+                    <li>Green Coffee Bean Extracts</li>
+                    <li>Garcinia Cambogia</li>
+                    <li>Green Tea Extract</li>
+                    <li>Guggul</li>
+                  </ul>
+                  <ul className="sports-category-list">
+                    <li className="top-heading">Vital Herbs</li>
+                    <li>Ginseng</li>
+                    <li>Ginkgo Biloba</li>
+                    <li>Herbal Weight Gainer</li>
+                    <li>Lutein</li>
+                    <li>Other Herbal Supplements</li>
+                    <li>Women Health Care</li>
+                  </ul>
+                  <ul className="sports-category-list">
+                    <li className="top-heading">Antioxidants</li>
+                    <li>Milk Thistle</li>
+                    <li>Spirulina</li>
+                    <li>Tulsi</li>
+                    <li>Turmeric</li>
+                    <li>Amla</li>
+                  </ul>
+                  <ul className="sports-category-list">
+                    <li className="top-heading">Herbs For Immunity</li>
+                    <li>Giloy</li>
+                    <li>Ayush Kwath</li>
+                    <li>Amla</li>
+                    <li>Turmeric</li>
+                    <li>Ashwagandha</li>
+                    <li>Neem</li>
+                    <li>Ginger</li>
+                  </ul>
+                  <ul className="sports-category-list">
+                    <li className="top-heading">Herbs For Personal Care</li>
+                    <li>Ashwagandha</li>
+                    <li>Shilajit</li>
+                    <li>Musli</li>
+                    <li>Maca</li>
+                    <li>Horny Goat Weed</li>
+                  </ul>
+                </div>
+              ) : showCurrent === "listItemHealth" ? (
+                <div id="health-category-show">
+                  <ul className="sports-category-list">
+                    <li className="top-heading">Vital Herbs</li>
+                    <li>Ginseng</li>
+                    <li>Ginkgo Biloba</li>
+                    <li>Herbal Weight Gainer</li>
+                    <li>Lutein</li>
+                    <li>Other Herbal Supplements</li>
+                    <li>Women Health Care</li>
+                  </ul>
+                  <ul className="sports-category-list">
+                    <li className="top-heading">Antioxidants</li>
+                    <li>Milk Thistle</li>
+                    <li>Spirulina</li>
+                    <li>Tulsi</li>
+                    <li>Turmeric</li>
+                    <li>Amla</li>
+                  </ul>
+                  <ul className="sports-category-list">
+                    <li className="top-heading">Herbs For Immunity</li>
+                    <li>Giloy</li>
+                    <li>Ayush Kwath</li>
+                    <li>Amla</li>
+                    <li>Turmeric</li>
+                    <li>Ashwagandha</li>
+                    <li>Neem</li>
+                    <li>Ginger</li>
+                  </ul>
+                  <ul className="sports-category-list">
+                    <li className="top-heading">Herbs For Personal Care</li>
+                    <li>Ashwagandha</li>
+                    <li>Shilajit</li>
+                    <li>Musli</li>
+                    <li>Maca</li>
+                    <li>Horny Goat Weed</li>
+                  </ul>
+                </div>
+              ) : showCurrent === "listItemFitness" ? (
+                <div id="fitness-category-show">
+                  <ul className="sports-category-list">
+                    <li className="top-heading">Herbs For Immunity</li>
+                    <li>Giloy</li>
+                    <li>Ayush Kwath</li>
+                    <li>Amla</li>
+                    <li>Turmeric</li>
+                    <li>Ashwagandha</li>
+                    <li>Neem</li>
+                    <li>Ginger</li>
+                  </ul>
+                  <ul className="sports-category-list">
+                    <li className="top-heading">Vital Herbs</li>
+                    <li>Ginseng</li>
+                    <li>Ginkgo Biloba</li>
+                    <li>Herbal Weight Gainer</li>
+                    <li>Lutein</li>
+                    <li>Other Herbal Supplements</li>
+                    <li>Women Health Care</li>
+                  </ul>
+                  <ul className="sports-category-list">
+                    <li className="top-heading">Antioxidants</li>
+                    <li>Milk Thistle</li>
+                    <li>Spirulina</li>
+                    <li>Tulsi</li>
+                    <li>Turmeric</li>
+                    <li>Amla</li>
+                  </ul>
+                  <ul className="sports-category-list">
+                    <li className="top-heading">Herbs For Immunity</li>
+                    <li>Giloy</li>
+                    <li>Ayush Kwath</li>
+                    <li>Amla</li>
+                    <li>Turmeric</li>
+                    <li>Ashwagandha</li>
+                    <li>Neem</li>
+                    <li>Ginger</li>
+                  </ul>
+                  <ul className="sports-category-list">
+                    <li className="top-heading">Herbs For Personal Care</li>
+                    <li>Ashwagandha</li>
+                    <li>Shilajit</li>
+                    <li>Musli</li>
+                    <li>Maca</li>
+                    <li>Horny Goat Weed</li>
+                  </ul>
+                </div>
+              ) : showCurrent === "listItemWelness" ? (
+                <div id="fitness-category-show">
+                  <ul className="sports-category-list">
+                    <li className="top-heading">Antioxidants</li>
+                    <li>Milk Thistle</li>
+                    <li>Spirulina</li>
+                    <li>Tulsi</li>
+                    <li>Turmeric</li>
+                    <li>Amla</li>
+                  </ul>
+                  <ul className="sports-category-list">
+                    <li className="top-heading">Vital Herbs</li>
+                    <li>Ginseng</li>
+                    <li>Ginkgo Biloba</li>
+                    <li>Herbal Weight Gainer</li>
+                    <li>Lutein</li>
+                    <li>Other Herbal Supplements</li>
+                    <li>Women Health Care</li>
+                  </ul>
+                  <ul className="sports-category-list">
+                    <li className="top-heading">Antioxidants</li>
+                    <li>Milk Thistle</li>
+                    <li>Spirulina</li>
+                    <li>Tulsi</li>
+                    <li>Turmeric</li>
+                    <li>Amla</li>
+                  </ul>
+                  <ul className="sports-category-list">
+                    <li className="top-heading">Herbs For Immunity</li>
+                    <li>Giloy</li>
+                    <li>Ayush Kwath</li>
+                    <li>Amla</li>
+                    <li>Turmeric</li>
+                    <li>Ashwagandha</li>
+                    <li>Neem</li>
+                    <li>Ginger</li>
+                  </ul>
+                  <ul className="sports-category-list">
+                    <li className="top-heading">Herbs For Personal Care</li>
+                    <li>Ashwagandha</li>
+                    <li>Shilajit</li>
+                    <li>Musli</li>
+                    <li>Maca</li>
+                    <li>Horny Goat Weed</li>
+                  </ul>
+                </div>
+              ) : (
+                ""
+              )}
             </NavDropdown>
             <span>
               <ArrowForwardIosIcon />
@@ -80,7 +422,7 @@ function CollapsibleExample() {
         </Container>
       </Navbar>
       <PagesHeader />
-      <Slider value=""/>
+      <Slider value="" />
     </>
   );
 }

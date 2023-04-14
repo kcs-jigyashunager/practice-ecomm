@@ -21,11 +21,12 @@ $ui-font: system-ui;
     margin-left: 129px;
     display: flex;
     align-items: center;
-    padding: 8px 122px 8px 25px;
+    padding: 2px 100px 0px 25px;
     cursor: pointer;
     border-radius: 3px;
     transform: skewX(-10deg);
     color: white;
+    z-index: 999;
     font-weight: 400;
     margin-right: 13px;
 }
@@ -75,11 +76,10 @@ $ui-font: system-ui;
 .header-lists{
     color: black;
     display: flex;
+    justify-content: center;
     list-style: none;
     align-items: center;
-    position: absolute;
     z-index: 99;
-    margin-left: 30px;
 }
 
 .header-lists{
@@ -123,4 +123,86 @@ $ui-font: system-ui;
         color: #473f3b;
         margin-right: 10px;
     }
+}
+
+.search-bg .dropdown, .dropdown-center, .dropend, .dropstart, .dropup, .dropup-center {
+    position: relative;
+    transform: skewX(10deg) !important;
+}
+
+.search-bg .nav-link{
+    padding: 10px;
+}
+
+.sports-category-list{
+    list-style: none;
+    .top-heading{
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    li{
+        padding-right: 12px;
+        padding-left: 12px;
+        padding-bottom: 10px;
+        font-size: 14px;
+        font-family: system-ui;
+        font-weight: 400;
+    }
+}
+
+.categories-header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #dedede;
+    li{
+        padding-right: 14px;
+        padding-left: 14px;
+        font-family: system-ui;
+        font-weight: 600;
+    }
+}
+
+.dropdown-menu[data-bs-popper] {
+    width: 62pc;
+    border: 0px;
+    border-top: 5px solid $text-color;
+    border-radius: 1px;
+    margin-top: 8px;
+}
+
+#sports-category-show{
+    display: flex;
+}
+
+#vitamins-category-show{
+    display: flex;
+}
+
+#herbs-category-show{
+    display: flex;
+}
+
+#health-category-show{
+    display: flex;
+}
+
+#fitness-category-show{
+    display: flex;
+}
+
+.headings-best-sellers{
+    list-style: none;
+    li{
+        font-family: system-ui;
+        font-weight: 600;
+        padding: 10px 10px;
+        font-size: 16px;
+    }
+
+}
+.dropdown-menu{
+    min-width: 23rem !important;    
 }

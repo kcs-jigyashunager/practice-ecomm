@@ -276,7 +276,7 @@ $text-gray: #807f7f;
 
     h4:hover {
         background-color: black;
-        color:  white;
+        color: white;
     }
 
     .selected-heading {
@@ -290,32 +290,37 @@ $text-gray: #807f7f;
         display: flex;
         justify-content: space-between;
     }
-    .swiper, swiper-container{
+
+    .swiper,
+    swiper-container {
         margin-top: -10px !important;
         margin-right: 85px !important;
         margin-left: 85px !important;
         padding-right: 0px !important;
         padding-left: 18px !important;
     }
-    .arrow-icon{
+
+    .arrow-icon {
         margin: -4px 0px 0px 0px;
 
     }
 }
 
-.main-slider-offer{
+.main-slider-offer {
     margin: 60px 95px 0px 100px;
 }
+
 .offer-img-main {
     display: flex;
     margin: 60px 95px 0px 100px;
+
     .offer-img img {
         border-radius: 14px;
         margin-left: 8px;
     }
 }
 
-.brands-heading{
+.brands-heading {
     text-align: center;
     margin-top: 50px;
     font-family: $main-font;
@@ -323,7 +328,8 @@ $text-gray: #807f7f;
     align-items: center;
     margin-left: 60px;
     margin-bottom: 40px;
-    .arrow-span{
+
+    .arrow-span {
         margin-right: 10px;
         margin-top: -10px;
         color: $background;
@@ -333,27 +339,30 @@ $text-gray: #807f7f;
     }
 }
 
-.brands-main{
-    .main-slider-offer{
+.brands-main {
+    .main-slider-offer {
         margin: 40px 95px 0px 160px;
     }
 
 }
 
-.headings-why-nutritrix{
+.headings-why-nutritrix {
     margin: $margin-page-large-content;
     padding-top: 50px;
-    h6{
+
+    h6 {
         color: $text-color;
         margin-left: 10px;
     }
-    h2{
+
+    h2 {
         font-size: 54px;
         font-family: $main-font;
         width: 60%;
         font-style: italic;
     }
 }
+
 .pointers-why-nutritrix {
     display: grid;
     grid-template-columns: 400px 400px;
@@ -361,14 +370,17 @@ $text-gray: #807f7f;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     margin: 50px 0px 0px 60px;
-    .inside-headings{
+
+    .inside-headings {
         display: flex;
     }
-    .pointers-icon{
+
+    .pointers-icon {
         font-size: 55px;
         color: $text-color;
     }
-    button{
+
+    button {
         border: 0px;
         border-radius: 2px;
         background-color: black;
@@ -377,26 +389,31 @@ $text-gray: #807f7f;
         transform: $tranform;
         margin-left: 10px;
     }
-    button:hover{
+
+    button:hover {
         background-color: $text-color;
         color: white;
     }
 }
 
-.main-why-nutritrix{
+.main-why-nutritrix {
     display: flex;
+
     .reviews-main {
         width: 550px;
         margin: 200px 0px 0px 0px;
         background-color: #f5f5f5;
-        h5{
+
+        h5 {
             font-style: $ui-font;
         }
-        p{
+
+        p {
             height: 200px;
         }
     }
-    .swiper-horizontal>.swiper-pagination-bullets{
+
+    .swiper-horizontal>.swiper-pagination-bullets {
         left: -156px;
         top: 239px;
     }
@@ -406,14 +423,17 @@ $text-gray: #807f7f;
     display: flex;
     justify-content: center;
     margin: 60px 0px 0px 0px;
+
     .bundle-offer-image {
         margin: 0px 0px 0px -125px;
     }
-    .bundle-heading{
+
+    .bundle-heading {
         font-family: fantasy;
         display: inline-flex;
         align-items: center;
         margin: 0px 60px 0px 60px;
+
         span {
             margin-right: 10px;
             margin-top: -10px;
@@ -423,66 +443,80 @@ $text-gray: #807f7f;
             stroke-width: 4;
         }
     }
-    h5{
+
+    h5 {
         font-weight: 500;
         font-size: 14px;
         margin-left: 60px;
         font-style: oblique;
     }
-    .main-quantity-box{
+
+    .main-quantity-box {
         display: flex;
         justify-content: center;
         align-items: center;
         border: 1px solid gainsboro;
         margin-top: -6px;
-        button{
+
+        button {
             border: 0px;
             padding: 4px 14px 4px 14px;
         }
-        svg{
+
+        svg {
             font-size: 14px;
             font-weight: 300;
         }
-        div{
-            height:21px
+
+        div {
+            height: 21px
         }
     }
+
     .bundle-products {
         margin: 15px 0px 0px 55px;
         border-bottom: 1px solid gainsboro;
     }
+
     .bundle-product {
         display: flex;
         border-top: 0.2px solid gainsboro;
         padding: 12px;
         justify-content: center;
         align-items: center;
-        h4{
+
+        h4 {
             font-size: 14px;
             width: 40%;
             margin-right: 20px;
-       }
-       .product-card-image{
-        margin-left: -30px;
-        margin-right: 10px;
-       }
-       h6{
-        margin-left: 120px;
+        }
+
+        .product-card-image {
+            margin-left: -30px;
+            margin-right: 10px;
+        }
+
+        h6 {
+            margin-left: 120px;
         }
     }
+
     .main-content-bundle {
         padding-left: 60px;
     }
-    .bundle-price{
+
+    .bundle-price {
         color: gray;
         font-weight: 400;
         font-size: 18px;
         margin: 20px 0px 0px 54px;
-        span{
+
+        span {
             color: black;
         }
     }
-    .bundle-add-to{
+
+    .bundle-add-to {
         margin: 20px 0px 0px 54px;
         border: 0px;
         transform: $tranform;
@@ -491,30 +525,35 @@ $text-gray: #807f7f;
         padding: 10px 20px 10px 20px;
         border-radius: 2px;
     }
-    .bundle-add-to:hover{
+
+    .bundle-add-to:hover {
         background-color: $text-color;
     }
 }
 
-.blogs-slider-main{
+.blogs-slider-main {
     margin-top: -20px;
-    h6{
+
+    h6 {
         margin-top: 13px;
         font-size: 15px;
         color: $text-color;
     }
-    .blog-slider-heading{
+
+    .blog-slider-heading {
         font-family: $main-font;
         width: 80%;
     }
 }
-.blog-main-heading{
+
+.blog-main-heading {
     text-align: center;
     font-family: fantasy;
     display: inline-flex;
     align-items: center;
     margin: 0px 60px 0px 60px;
     padding-top: 60px;
+
     span {
         margin-right: 10px;
         margin-top: -10px;
@@ -529,13 +568,17 @@ div#__next {
     overflow-x: hidden;
 }
 
+
+
 @media (min-width: 1500px) {
+
     /* Your styles here */
-    .product-section-class .swiper, .product-section-class swiper-container{
+    .product-section-class .swiper,
+    .product-section-class swiper-container {
         margin-top: -10px !important;
         margin-right: 195px !important;
         margin-left: 195px !important;
         padding-right: 0px !important;
         padding-left: 12px !important;
     }
-  }
+}

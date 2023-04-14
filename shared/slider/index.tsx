@@ -7,7 +7,6 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 const Slider = ({ value }: { value: string }) => {
-  console.log(value);
   return (
     <>
       {value === "VITAMINS & MINERALS" ? (
@@ -217,7 +216,7 @@ const Slider = ({ value }: { value: string }) => {
             </Swiper>
           </div>
         )
-      ) : (
+      ) : value === "TRENDING NOW" ? "" : (
         <div className="main-slider">
           <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y]}
