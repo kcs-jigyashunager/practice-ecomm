@@ -37,7 +37,6 @@ const LatestDeals = () => {
     }
   }, []);
 
-  // adjust interval timing based on your needs
 
   return (
     <>

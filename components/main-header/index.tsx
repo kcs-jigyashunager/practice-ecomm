@@ -31,12 +31,12 @@ function CollapsibleExample() {
   useEffect(() => {
     var getElement = document.getElementById('collasible-nav-dropdown');
 
-    if(getElement) {
+    if (getElement) {
       var attributeValue = getElement.getAttribute('aria-expanded')
-      if(attributeValue){
+      if (attributeValue) {
         setDefaultValue(true)
       }
-  }
+    }
 
 
     // Get the list item and hidden div elements
@@ -76,8 +76,10 @@ function CollapsibleExample() {
       setShowCurrent("listItemWelness");
       setDefaultValue(false);
     });
+    if(defaultValue){
+      setShowCurrent("listItemSports")
+    }
   }, [show]);
-
 
   return (
     <>
@@ -104,12 +106,12 @@ function CollapsibleExample() {
               onMouseLeave={hideDropdown}
             >
               <ul className="categories-header">
-                <li id="sports-header-name">Sports Nutrition</li>
-                <li id="vitamins-header-name">Vitamins & Supplements</li>
-                <li id="herbs-header-name">Ayurveda & Herbs</li>
-                <li id="health-header-name">Health Food & Drinks</li>
-                <li id="fitness-header-name">Fitness</li>
-                <li id="welness-header-name">Welness</li>
+                <li id="sports-header-name" className={showCurrent === "listItemSports" || defaultValue ? 'underline-text' : ''}>Sports Nutrition</li>
+                <li id="vitamins-header-name" className={showCurrent === "listItemVitamins" ? 'underline-text' : ''}>Vitamins & Supplements</li>
+                <li id="herbs-header-name" className={showCurrent === "listItemHerbs" ? 'underline-text' : ''}>Ayurveda & Herbs</li>
+                <li id="health-header-name" className={showCurrent === "listItemHealth" ? 'underline-text' : ''}>Health Food & Drinks</li>
+                <li id="fitness-header-name" className={showCurrent === "listItemFitness" ? 'underline-text' : ''}>Fitness</li>
+                <li id="welness-header-name" className={showCurrent === "listItemWelness" ? 'underline-text' : ''}>Welness</li>
               </ul>
               {showCurrent === "listItemSports" || defaultValue ? (
                 <div id="sports-category-show">

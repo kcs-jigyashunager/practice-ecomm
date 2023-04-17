@@ -11,14 +11,6 @@ import React, { useState, useEffect, forwardRef, Fragment } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 
 function CollapsibleExample() {
-  // const [name, setName] = useState("");
-
-  // const showDropdown = (e: any) => {
-  //   setName(e.target.innerHTML);
-  // };
-  // const hideDropdown = (e: any) => {
-  //   setName("");
-  // };
   const [show, setShow] = useState(false);
   const showDropdown = (e:any)=>{
       setShow(!show);
