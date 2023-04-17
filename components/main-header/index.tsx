@@ -11,7 +11,6 @@ import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
 import React, { useState, useEffect, forwardRef, Fragment } from "react";
-import Dropdown from "react-bootstrap/Dropdown";
 import PagesHeader from "../header-tags";
 import HeaderHero from "../header-hero-tags";
 import Slider from "@/shared/slider";
@@ -94,7 +93,6 @@ function CollapsibleExample() {
             height={200}
             priority
           />
-          {/* <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand> */}
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <div className="search-bg">
             <NavDropdown
