@@ -9,21 +9,26 @@ import WhyNutritrix from "@/shared/whynutritrix";
 import BundlePack from "@/shared/bundle-pack";
 import BlogSlider from "@/shared/blogs-slider";
 import Footer from "@/shared/footer";
-import TrendingNow from "../trending-now";
 
 const Homepage = () => {
+  const [wishlistCount, setWishlistCount] = useState<string>("")
+  const handleButtonClick = (value:any) => {
+    // Do something
+    setWishlistCount(value)
+  };
+
   return (
     <>
-      <Header />
+      <Header wishlistCount={wishlistCount} />
       <Categories/>
       <PopularCategories/>
-      <TrendingNow/>
+      <ProductsSection handleButtonClick={handleButtonClick} heading="TRENDING NOW"/>
       <Banner/>
       <BundlePack/> 
-      <ProductsSection heading="VITAMINS & MINERALS"/>
-      <ProductsSection heading="RECOVERY & REPAIR"/>
-      <ProductsSection heading="ENERGY & ENDURANCE"/>
-      <ProductsSection heading="WORKOUT ESSENTIALS"/>
+      <ProductsSection handleButtonClick={handleButtonClick} heading="VITAMINS & MINERALS"/>
+      <ProductsSection handleButtonClick={handleButtonClick} heading="RECOVERY & REPAIR"/>
+      <ProductsSection handleButtonClick={handleButtonClick} heading="ENERGY & ENDURANCE"/>
+      <ProductsSection handleButtonClick={handleButtonClick} heading="WORKOUT ESSENTIALS"/>
       <Brands/>
       <WhyNutritrix/>
       <BlogSlider/>

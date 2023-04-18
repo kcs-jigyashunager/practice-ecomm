@@ -12,7 +12,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Slider from "@/shared/slider";
 import myCustomData from "@/json-data/data.json";
 
-const ProductsSection = ({ heading }: { heading: string }) => {
+const ProductsSection = ({ heading, handleButtonClick }: { heading: string, handleButtonClick: Function }) => {
   const [selected, setSelected] = useState<string>("");
   const [value, setValue] = useState<number>(2);
   const [defaultValue, setDefaultValue] = useState<boolean>(true);
@@ -27,7 +27,6 @@ const ProductsSection = ({ heading }: { heading: string }) => {
     }
   }
 
-
   useEffect(() => {
     // Get the stored value from local storage when the component mounts
     const storedCount = sessionStorage.getItem("wishlist-count");
@@ -39,8 +38,10 @@ const ProductsSection = ({ heading }: { heading: string }) => {
 
   useEffect(() => {
     // Perform localStorage action
-    if(num.length > 0) {
+    if(num.length >= 0) {
     const item = sessionStorage.setItem('wishlist-count', JSON.stringify(num))
+    handleButtonClick(num.length)
+
 }
   }, [num])
 
@@ -113,7 +114,7 @@ const ProductsSection = ({ heading }: { heading: string }) => {
                   className="product-card-image"
                 />
                 <FavoriteOutlinedIcon
-                  onClick={() => handlewWishList(index)}
+                  onClick={() => {handlewWishList(index)}}
                   className={num.includes(index) ? "wishlist-icon-color" : "wishlist-icon"}
                   width={60}
                   height={60}

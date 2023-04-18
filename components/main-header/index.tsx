@@ -9,13 +9,13 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import SearchIcon from "@mui/icons-material/Search";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
+import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 import React, { useState, useEffect, forwardRef, Fragment } from "react";
 import PagesHeader from "../header-tags";
 import HeaderHero from "../header-hero-tags";
 import Slider from "@/shared/slider";
 
-function CollapsibleExample() {
+function CollapsibleExample({wishlistCount}: {wishlistCount:string}) {
   const [show, setShow] = useState(false);
   const [showCurrent, setShowCurrent] = useState<string>("sports-header-name");
   const [defaultValue, setDefaultValue] = useState<boolean>(true);
@@ -28,6 +28,7 @@ function CollapsibleExample() {
   };
 
   useEffect(() => {
+    
     var getElement = document.getElementById('collasible-nav-dropdown');
 
     if (getElement) {
@@ -78,7 +79,11 @@ function CollapsibleExample() {
     if(defaultValue){
       setShowCurrent("listItemSports")
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [show]);
+
+  
+
 
   return (
     <>
@@ -416,7 +421,9 @@ function CollapsibleExample() {
             <br />
             <div className="icons">
               <FavoriteBorderIcon className="heart-icon" />
-              <ShoppingCartCheckoutIcon />
+              <p className="circle">{wishlistCount}</p>
+              <ShoppingBagOutlinedIcon />
+              <p className="circle">0</p>
             </div>
           </div>
         </Container>

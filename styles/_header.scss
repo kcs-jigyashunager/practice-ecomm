@@ -63,11 +63,28 @@ $ui-font: system-ui;
 
     .icons {
         position: absolute;
+        display: flex;
         margin-left: 100px;
     }
 
     .heart-icon {
-        margin-right: 20px;
+        cursor: pointer;
+    }
+
+    .circle {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        background-color: #C60303;
+        left: -17px;
+        top: 15px;
+        color: white;
+        font-weight: 600;
+        /* Add margin to create spacing between the circle and the text */
     }
 }
 
@@ -97,11 +114,12 @@ $ui-font: system-ui;
 .header-lists .header-list-mains:hover {
     color: $text-color;
     cursor: pointer;
+
     .social .link:hover {
         color: white;
         margin-left: -5px;
         transform: translateX(20px) rotate(360deg);
-      }
+    }
 }
 
 .header-hero-tags {
@@ -265,7 +283,8 @@ $ui-font: system-ui;
         background-color: #aaded9;
         color: $text-color;
     }
-    .color-white{
+
+    .color-white {
         margin-top: -8px;
         font-size: 16 px;
         padding-top: 20px;
@@ -300,6 +319,7 @@ $ui-font: system-ui;
     top: 3%;
     color: black;
     z-index: -1;
+
     ul {
         padding-left: 30px;
     }
@@ -313,7 +333,7 @@ $ui-font: system-ui;
         list-style: none;
     }
 
-    li:hover{
+    li:hover {
         color: #014a44;
     }
 }
@@ -328,8 +348,9 @@ $ui-font: system-ui;
 }
 
 .brands-logo {
-    display: flex;  
-    img{
+    display: flex;
+
+    img {
         margin-left: 45px;
         width: 78px;
         border-style: groove;
@@ -337,61 +358,59 @@ $ui-font: system-ui;
 }
 
 /* Target the horizontal scrollbar in WebKit-based browsers */
-  .dropdown-menu::-webkit-scrollbar {
-    width: 2px ; /* Width of the scrollbar */
+.dropdown-menu::-webkit-scrollbar {
+    width: 2px;
+    /* Width of the scrollbar */
     height: 7px;
-  }
-  
-  /* Customize the background and border of the scrollbar track */
-  .dropdown-menu::-webkit-scrollbar-track {
+}
+
+/* Customize the background and border of the scrollbar track */
+.dropdown-menu::-webkit-scrollbar-track {
     background-color: #f0f0f0;
     border-radius: 8px;
-  }
-  
-  /* Customize the appearance of the scrollbar thumb (the draggable handle) */
+}
+
+/* Customize the appearance of the scrollbar thumb (the draggable handle) */
 .dropdown-menu::-webkit-scrollbar-thumb {
     background-color: #999999;
     border-radius: 8px;
-  }
-  
-  /* Target the horizontal scrollbar in Firefox */
-  ::-moz-scrollbar {
+}
+
+/* Target the horizontal scrollbar in Firefox */
+::-moz-scrollbar {
     /* CSS properties for Firefox scrollbar */
-  }
-  
-  /* Target the horizontal scrollbar in Internet Explorer/Edge */
-  ::-ms-scrollbar {
+}
+
+/* Target the horizontal scrollbar in Internet Explorer/Edge */
+::-ms-scrollbar {
     /* CSS properties for IE/Edge scrollbar */
-  }
-  
-  .deal-icons{
+}
+
+.deal-icons {
     display: flex;
     width: 450px;
-    img{
+
+    img {
         margin-left: 10px;
     }
-  }
+}
 
-  .deals-div{
-    .dropdown-menu{
+.deals-div {
+    .dropdown-menu {
         border: 0px;
     }
-  }
-  
-  .customer-div{
-    .dropdown-menu{
+}
+
+.customer-div {
+    .dropdown-menu {
         border: 0px;
-        width: 184px !important;    
+        width: 184px !important;
     }
-    li:hover{
+
+    li:hover {
         color: $text-color;
         font-size: 14px;
         font-weight: 400;
         font-family: system-ui;
     }
-  }
-
-
-  
-  
-  
+}
