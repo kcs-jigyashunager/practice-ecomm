@@ -56,14 +56,13 @@ const LatestDeals = () => {
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={0}
           slidesPerView={2}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
+          // onSlideChange={() => console.log("slide change")}
+          // onSwiper={(swiper) => console.log(swiper)}
           navigation={true}
           className="latest-deals-slider"
         >
            {myCustomData?.data.map((product, index) => (
-            <>
-            <SwiperSlide key={index+'a'}>
+            <SwiperSlide key={product.image}>
             <div className="product-card">
               <div className="product-image">
                 <Image 
@@ -101,13 +100,9 @@ const LatestDeals = () => {
                 <div className="progress-bar">
                   <div className="progress"></div>
                 </div>
-                {/* <button className="hover-up">
-                  <span>ADD TO CART</span>
-                </button> */}
               </div>
             </div>
           </SwiperSlide>
-          </>
           ))}
           </Swiper>
       </div>

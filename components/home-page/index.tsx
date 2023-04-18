@@ -9,6 +9,7 @@ import WhyNutritrix from "@/shared/whynutritrix";
 import BundlePack from "@/shared/bundle-pack";
 import BlogSlider from "@/shared/blogs-slider";
 import Footer from "@/shared/footer";
+import TrendingNow from "../trending-now";
 
 const Homepage = () => {
   return (
@@ -16,9 +17,9 @@ const Homepage = () => {
       <Header />
       <Categories/>
       <PopularCategories/>
-      <ProductsSection heading="TRENDING NOW"/>
+      <TrendingNow/>
       <Banner/>
-      <BundlePack/>
+      <BundlePack/> 
       <ProductsSection heading="VITAMINS & MINERALS"/>
       <ProductsSection heading="RECOVERY & REPAIR"/>
       <ProductsSection heading="ENERGY & ENDURANCE"/>

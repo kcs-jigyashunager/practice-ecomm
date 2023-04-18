@@ -3,7 +3,6 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Dropdown from 'react-bootstrap/Dropdown';
 import Image from "next/image";
-import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
 
 
 const PagesHeader = () => {
@@ -22,10 +21,7 @@ const PagesHeader = () => {
 
   const handleItemMouseEnter = (eventKey: any) => {
     setHoveredItem(eventKey);
-    console.log(eventKey)
-
   };
-  console.log(hoveredItem)
 
 
   return (
@@ -35,7 +31,6 @@ const PagesHeader = () => {
         <ul className="header-lists">
           <li className="header-list-mains">
             <div className="best-sellers-div">
-            <div className="social"><ArrowCircleDownIcon className="link facebook" /></div>
               <NavDropdown
                 title="Best Sellers"
                 id="collasible-nav-dropdown"

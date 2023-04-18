@@ -12,10 +12,8 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Slider from "@/shared/slider";
 import myCustomData from "@/json-data/data.json";
 
-const ProductsSection = ({ heading }: { heading: string }) => {
-  const [selected, setSelected] = useState<string>("");
+const TrendingNow = () => {
   const [value, setValue] = useState<number>(2);
-  const [defaultValue, setDefaultValue] = useState<boolean>(true);
   const [num, setNum] = useState<Array<number>>([]);
 
   const handlewWishList = (productIndex:number) => {
@@ -29,7 +27,6 @@ const ProductsSection = ({ heading }: { heading: string }) => {
 
 
   useEffect(() => {
-    // Get the stored value from local storage when the component mounts
     const storedCount = sessionStorage.getItem("wishlist-count");
     if (storedCount) {
       setNum(JSON.parse(storedCount));
@@ -38,7 +35,6 @@ const ProductsSection = ({ heading }: { heading: string }) => {
   }, []);
 
   useEffect(() => {
-    // Perform localStorage action
     if(num.length > 0) {
     const item = sessionStorage.setItem('wishlist-count', JSON.stringify(num))
 }
@@ -49,7 +45,7 @@ const ProductsSection = ({ heading }: { heading: string }) => {
       <div className="product-section-class">
         <div className="popular-categories-heading">
           <h2>
-            {heading}
+            TRENDING NOW
             <span>
               <ArrowForwardIosIcon
                 className="arrow-icon"
@@ -58,50 +54,19 @@ const ProductsSection = ({ heading }: { heading: string }) => {
               />
             </span>
           </h2>
-
-          {heading !== "TRENDING NOW" ? <div className="products-section">
-            <h4
-              className={
-                defaultValue || selected === "featured"
-                  ? "selected-heading"
-                  : ""
-              }
-              onClick={() => setSelected("featured")}
-            >
-              FEATURED PRODUCTS
-            </h4>
-            <h4
-              className={selected === "rated" ? "selected-heading" : ""}
-              onClick={() => {
-                setSelected("rated");
-                setDefaultValue(false);
-              }}
-            >
-              TOP RATED
-            </h4>
-            <h4
-              className={selected === "seller" ? "selected-heading" : ""}
-              onClick={() => {
-                setSelected("seller");
-                setDefaultValue(false);
-              }}
-            >
-              BEST SELLER
-            </h4>
-          </div>: ""}
         </div> 
 
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={0}
           slidesPerView={5}
-          // onSlideChange={() => console.log("slide change")}
-          // onSwiper={(swiper) => console.log(swiper)}
+        //   onSlideChange={() => console.log("slide change")}
+        //   onSwiper={(swiper) => console.log(swiper)}
           navigation={true}
           className="products-slider"
         >
           {myCustomData?.data.map((product, index) => (
-           <SwiperSlide key={index} >
+           <SwiperSlide key={product.id}>
             <div className="product-card">
               <div className="product-image">
                 <Image
@@ -144,9 +109,9 @@ const ProductsSection = ({ heading }: { heading: string }) => {
           ))}
         </Swiper>
       </div>
-      {/* <Slider value={heading} /> */}
+      <Slider value={"TRENDING NOW"} />
     </>
   );
 };
 
-export default ProductsSection;
+export default TrendingNow;

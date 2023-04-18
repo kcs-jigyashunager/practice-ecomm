@@ -391,48 +391,7 @@ $ui-font: system-ui;
     }
   }
 
-  
-.social {
-    position: absolute;
-    top: 187px;
-    left: 294px;
-    text-align: center;
-    transform: translateY(-50%);
-  }
-  
-  .social .link {
-    display: inline-block;
-    vertical-align: middle;
-    position: relative;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    border: 2px dashed white;
-    background-clip: content-box;
-    padding: 10px;
-    transition: .5s;
-    color: #D7D0BE;
-    margin-left: 15px;
-    margin-right: 15px;
-    font-size: 70px;
-  }
-  
-  .social .link span {
-    display: block;
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
 
-  
-  .social .link.facebook {
-    color: $text-color;
-  }
-  
-  
   
   
   

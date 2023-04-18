@@ -15,8 +15,8 @@ const Slider = ({ value }: { value: string }) => {
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             spaceBetween={1000}
             slidesPerView={1}
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={(swiper) => console.log(swiper)}
+            // onSlideChange={() => console.log("slide change")}
+            // onSwiper={(swiper) => console.log(swiper)}
             navigation={true}
             pagination={{ clickable: true }}
           >
@@ -91,8 +91,8 @@ const Slider = ({ value }: { value: string }) => {
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             spaceBetween={1000}
             slidesPerView={1}
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={(swiper) => console.log(swiper)}
+            // onSlideChange={() => console.log("slide change")}
+            // onSwiper={(swiper) => console.log(swiper)}
             navigation={true}
             pagination={{ clickable: true }}
           >
@@ -131,8 +131,8 @@ const Slider = ({ value }: { value: string }) => {
               modules={[Navigation, Pagination, Scrollbar, A11y]}
               spaceBetween={0}
               slidesPerView={7}
-              onSlideChange={() => console.log("slide change")}
-              onSwiper={(swiper) => console.log(swiper)}
+              // onSlideChange={() => console.log("slide change")}
+              // onSwiper={(swiper) => console.log(swiper)}
               navigation={true}
               pagination={{ clickable: true }}
             >
@@ -222,8 +222,8 @@ const Slider = ({ value }: { value: string }) => {
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             spaceBetween={1000}
             slidesPerView={1}
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={(swiper) => console.log(swiper)}
+            // onSlideChange={() => console.log("slide change")}
+            // onSwiper={(swiper) => console.log(swiper)}
             navigation={true}
             pagination={{ clickable: true }}
           >
